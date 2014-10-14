@@ -52,20 +52,44 @@ body
 	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
-
-
+	position: relative
+	background: #0d385a
+html
+	font-size: 62.5% 
+body, html
+	height: 100%
+	overflow-x: hidden
 // common blocks      
 
+//FONTS
++font("Montserrat Regular", montserrat-regular-webfont)
++font("Montserrat Bold", montserrat-bold-webfont)
++font("ProximaNova Regular", proximanova-reg-webfont)
++font("ProximaNova Light", proximanova-light)
++font("ProximaNova Bold", proximanova-bold-webfont)
 
+=monreg
+	font-family: "Montserrat Regular", Arial, sans-serif 
+=monbold
+	font-family: "Montserrat Bold", Arial, sans-serif 
+=novareg
+	font-family: "ProximaNova Regular", Arial, sans-serif 
+=novalight
+	font-family: "ProximaNova Light", Arial, sans-serif 
+=novabold
+	font-family: "ProximaNova Bold", Arial, sans-serif 
+=ttu
+	text-transform: uppercase
+//ALL
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
 
-
-
-
-
-
-
-
-
+h1
+	+monbold
+p
+	+novareg
+a
+	text-decoration: none
 
 
 

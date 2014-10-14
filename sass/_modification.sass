@@ -1,0 +1,201 @@
+.input-text
+	width: 100%
+	padding: 21px 30px 19px 155px
+	border-radius: 7px
+	+fs(27)
+	font-family: Myriad Pro, Arial, sans-serif
+	background: #FFF  
+	+box
+	+ttu
+	+placeholder-color(#bcbec0)
+	+r(1000)
+		padding: 22px 30px 21px 100px
+	+r(800)
+		+fs(18)
+		padding: 22px 30px 21px 75px
+		border-radius: 5px
+	+r(630)
+		padding: 11px 15px 11px 40px
+		border-radius: 3px
+		+fs(9)
+//checkbox
+.checkbox 
+	display: inline-block
+	position: relative
+	width: 100%
+	cursor: pointer
+	margin-top: 15px
+	input
+		display: inline-block
+		+opacity(0)
+		vertical-align: middle
+		&:checked
+			+ .checkbox__title
+				&:after
+					display: block
+	
+.checkbox__title
+	+fs(20)
+	+novareg
+	color: #808184 
+	display: inline-block
+	vertical-align: middle
+	margin-left: 14px
+	+r(800)
+		+fs(32)
+		margin-left: 28px
+	+r(630)
+		+fs(16)
+		margin-left: 12px
+		margin-top: 4px
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		width: 33px
+		height: 33px
+		background: white
+		border-radius: 3px
+		top: 0px
+		+r(800)
+			width: 54px
+			height: 54px
+			border-radius: 5px
+		+r(630)
+			width: 27px
+			height: 27px
+			border-radius: 3px
+	&:after
+		content: ""
+		display: none
+		position: absolute
+		top: 8px
+		left: 8px
+		z-index: 2
+		background: #2dbbc3
+		border-radius: 2px
+		width: 17px
+		height: 17px
+		+r(800)
+			width: 26px
+			height: 26px
+			border-radius: 3px
+			top: 14px
+			left: 14px
+		+r(630)
+			width: 13px
+			height: 13px
+			top: 7px
+			left: 7px
+			border-radius: 2px
+//SELECTS
+.methods-select
+	width: 290px
+	display: inline-block
+	text-align: left
+	vertical-align: top
+	+r(630)
+		margin: 0 auto 
+		width: 48%
+		max-width: 150px
+	p
+		+fs(24)
+		+novareg
+		color: white
+		width: 210px
+		margin-bottom: 15px
+		+r(630)
+			+fs(12)
+			width: 110px
+			margin-bottom: 7px
+	.is-active
+		.select__text
+			border-radius: 5px 5px 0 0
+.select
+	position: relative
+	cursor: pointer
+	+vertical
+	background: #1b3c52
+	border-radius: 5px 
+	color: #fff 
+	max-width: 290px
+	width: 100%
+.select_white
+	background: #fff 
+.select__text
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	padding: 14px 60px 10px 10px
+	width: 100%
+	+box
+	line-height: 32px
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	+fs(28)
+	background: none 
+	border-radius: 5px
+	+novabold
+	text-align: left
+	+r(630)
+		+fs(14)
+		line-height: 16px
+		padding: 7px 30px 6px 6px
+	&:hover
+		background: #19dae5 
+	&:after
+		content: ""
+		position: absolute
+		right: 20px
+		top: 50%
+		margin-top: -7px
+		+s(methods-arr)
+		+r(630)
+			width: 12px
+			height: 9px
+			background: url(../img/icons/methods-arr.png) no-repeat center center
+			+cover
+			margin-top: -4px
+			right: 10px
+.select__list
+	position: relative
+	display: none
+	z-index: 100
+	width: 100%
+	overflow: hidden
+	border-radius: 0 0 5px 5px
+	li
+		cursor: pointer
+		line-height: 1
+		+fs(28)
+		line-height: 32px
+		text-align: left
+		padding: 14px 60px 10px 10px 
+		+novabold
+		+r(630)
+			+fs(12)
+			line-height: 16px
+			padding: 7px 6px 6px 6px
+		&:hover
+			background: #19dae5
+			color: #fff 
+
+	//api
+.api-select
+	max-width: 252px
+	width: 100%
+	display: inline-block
+	.select__text
+		+fs(24)
+		line-height: 28px
+		padding: 12px 45px 8px 20px
+	.is-active
+		.select__text
+			&:hover
+				border-radius: 5px 5px 0 0
+	.select__list
+		li
+			padding: 12px 20px 8px 20px
+			+fs(24)
+			line-height: 28px

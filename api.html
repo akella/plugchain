@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out out_api">
+	<div class="header">
+		<a href="#" class="header__logo"><img src="img/logo.png" alt=""></a>
+		<div class="navigation">
+			<a href="#" class="navigation__menu"></a>
+			<a href="#" class="navigation__prof"></a>
+		</div>
+	</div>
+	<div class="api">
+		<div class="api__in">
+			<div class="api__sidebar">
+				<div class="sidebar-in">
+					<h2><a href="#">INTRODUCTION</a></h2>
+					<ul class="nav">
+						<li><a href="#" class="nav__item">Authentication</a></li>
+						<li><a href="#" class="nav__item">Errors</a></li>
+					</ul>
+					<h2><a href="#">REFERENCE</a></h2>
+					<ul class="nav">
+						<li><a href="#" class="nav__item">Versioning</a></li>
+						<li><a href="#" class="nav__item is-active">Security</a>
+							<ul class="nav__drop">
+								<li><a href="#" class="nav__drop-item">Question Sets</a></li>
+								<li><a href="#" class="nav__drop-item">Companies</a></li>
+								<li><a href="#" class="nav__drop-item">Watchlist Candidates</a></li>
+							</ul>
+						</li>
+						<li><a href="#" class="nav__item">Watchlists</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="api__content">
+				<div class="api__inner">
+					<div class="api__center">
+						<h1>PLUGCHAIN API BETA</h1>
+						<hr>
+						<h3>INTRODUCTION</h2>
+						<p>Plugchain API is a blockchain PaaS offering a raw of methods to build a cryptocurrency app.</p>
+						<h2>API description</h2>
+						<hr>
+						<h4>API endpoint</h4>
+						<div class="api__link">
+							<ul>
+								<li><span>plugchain.com/v1/bitcoin</span> - for Bitcoin</li>
+								<li><span>plugchain.com/v1/litecoin</span> - for Litecoin</li>
+							</ul>
+						</div>
+						<h4>Supported languages</h4>
+						<div class="language">
+							<ul>
+								<li>Node.js,</li>
+								<li>Python,</li>
+								<li>PHP,</li>
+								<li>Ruby,</li>
+								<li>C#,</li>
+								<li>Visual Basic,</li>
+								<li>Groovy,</li>
+								<li>Objective-C,</li>
+							</ul>
+						</div>
+						<h2>Blocks</h2>
+						<hr>
+						<div class="blocks">
+							<button class="blocks__button blocks__button_first">Get block object by hash</button>
+						</div>
+					</div>
+				</div>
+				<div class="api__right">
+					<div class="api__top">
+						<div class="api__select">
+							<i></i>
+							<div class="api-select ms-first">
+								<div class="select js-select">
+								    <span class="select__text js-select-text">Node.js</span>
+								    <input type="hidden" class="js-select-input" value="0">
+								    <ul class="select__list js-select-list">
+								        <li data-id="0">Unspent</li>
+								    </ul>
+								</div>
+							</div>
+						</div>
+						<div class="api__switch switch">
+							<a href="#" class="switch__buttons is-active">Example</a>
+							<a href="#" class="switch__buttons ">Console</a>
+						</div>
+					</div>
+					<ul class="api__way">
+						<li><a href="#">Blocks</a></li>
+						<li><a href="#">Block by hash</a></li>
+						<li><a href="#" class="is-active">Get block object by hash</a></li>
+					</ul>
+					<div class="api__right-in">
+						<span  class="api__prelink">Get</span><p class="api__link">https://proxy-plcapi.apiary.io/v1/bitcoin/unspents/<span>address</span></p>
+						<hr>
+						<h2>Parameters</h2>
+						<hr>
+						<div class="hash">
+							<div class="hash__left"><p>block_hash</p></div>
+							<div class="hash__right">
+								<p class="mark">Blockchain block to get information about</p>
+								<p class="p_mod">String</p>
+								<div class="hash__example">
+									<p>Example: <span>000000000000034a7dedef4a161fa058a2d67a173a90155f3a2fe6fc132e0ebf</span></p>
+								</div>
+							</div>
+						</div>
+						<h2>Request</h2>
+						<hr>
+						<ul class="request">
+							<li>1 https://plugchain.com/v1/bitcoin/block/000000000000034a7dedef4a161fa058a2d67a173a90155f3a2fe6fc132e0ebf</li>
+						</ul>
+						<h2>Response</h2>
+						<hr>
+						<span class="api__numbers">200</span>
+						<div class="content-type">
+							<p><span>Content-Type:</span> application/json</p>
+						</div>
+						<div class="api__screen">
+							<img src="img/api-screen.png" alt="">
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END out-->
+
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>

@@ -1,23 +1,330 @@
 // Normally mainpage styles
+.out
+	width: 100%
+	min-width: 320px 
+	min-height: 100%
+	margin: 0 0 -140px 0
+	position: relative
+	background: url(../img/background.jpg) no-repeat center center #0d385a
+	+r(800)
+		margin: 0
+		background: #0d385a
+	&:after
+		display: block
+		content: ""
+		width: 100%
+		height: 140px
+		+r(800)
+			display: none
+.header
+	width: 100%
+	position: relative
+	+clr
+	padding-top: 50px
+	text-align: center
+	padding-bottom: 45px
+	+r(630)
+		padding: 16px 0 0 0 
+	&__logo
+		position: absolute
+		top: 56px
+		left: 54px
+		+r(800)
+			display: none
+.navigation
+	position: absolute
+	top: 58px
+	right: 47px
+	+r(800)
+		left: 0
+		right: 0
+		top: 40px
+		padding: 0 20px
+	+r(630)
+		top: 18px
+		padding: 0 13px 
+	a
+		margin: 0 15px
+		float: right
+		position: relative
+		+r(800)
+			margin: 0
+	.navigation__plus
+		+s(plus)
+		right: 0
+		+transition(right 0.5s ease, transform 0.5s ease)
+		+r(800)
+			float: left
+			width: 48px
+			height: 48px
+			background: url(../img/icons/plus.png) no-repeat center center
+			+cover
+			margin: 0 0 0 17px
+		+r(630)
+			display: block
+			width: 24px
+			height: 24px
+			margin: 0
+			background: url(../img/icons/plus.png) no-repeat center center 
+			+cover
+	.navigation__menu
+		+s(menu) 
+		+r(800)
+			width: 48px
+			height: 46px
+			background: url(../img/icons/menu.png) no-repeat center center
+			+cover
+			margin: 0 17px 0 0 
+		+r(630)
+			display: block
+			width: 24px
+			height: 24px
+			margin: 0
+			background: url(../img/icons/menu.png) no-repeat center center 
+			+cover
+	.navigation__prof
+		+s(prof) 
+		+r(800)
+			float: left
+			width: 48px
+			height: 46px
+			background: url(../img/icons/prof.png) no-repeat center center
+			+cover
+			margin: 0 17px 0 0 
+		+r(630)
+			display: block
+			width: 24px
+			height: 24px
+			margin: 0
+			background: url(../img/icons/prof.png) no-repeat center center 
+			+cover
+	.is-x
+		right: 350px
+		-moz-transform: rotate(-135deg)
+		-ms-transform: rotate(-135deg)
+		-webkit-transform: rotate(-135deg)
+		-o-transform: rotate(-135deg)
+		transform: rotate(-135deg)
+.land
+	text-align: center
+	padding-top: 180px
+	+r(800)
+		padding-top: 90px
+	+r(630)
+		padding-top: 70px
+	.logo		
+		margin-bottom: 90px
+		display: inline-block
+		width: 66%
+		max-width: 562px
+		min-width: 210px
+		+r(800)
+			margin-bottom: 65px
+		+r(630)
+			margin-bottom: 30px
+		img
+			width: 100%
+	h1
+		+fs(45)
+		letter-spacing: -0.2px
+		color: #FFF 
+		+r(800)
+			+fs(44)
+		+r(630)
+			+fs(22)
+			margin-bottom: 7px
+		span
+			color: #39ecff
+	p
+		color: #FFF
+		+fs(20)
+		width: 67%
+		margin: 0 auto
+		+r(800)
+			+fs(24)
+			width: 440px
+		+r(630)
+			+fs(12)
+			width: 220px
+	h2
+		+novareg
+		+fs(34)
+		line-height: 39px
+		color: #FFF 
+		+r(800)
+			+fs(28)
+			line-height: 32px
+		+r(630)
+			+fs(14)
+			line-height: 16px 
+.search
+	width: 82%
+	max-width: 932px
+	margin: 60px auto 85px
+	display: inline-block
+	position: relative
+	+r(630)
+		margin: 40px auto 50px 
+	&:before
+		display: inline-block
+		position: absolute
+		top: 50%
+		left: 20px
+		content: ""
+		+s(search-bg)
+		margin-top: -20px
+		+r(800)
+			left: 15px
+			margin-top: -22px
+			+s(search-mob)
+		+r(630)
+			background: url(../img/icons/search-mob.png) no-repeat center center
+			+cover
+			height: 22px
+			width: 22px
+			margin-top: -11px
+			left: 8px
 
+.list
+	padding: 45px 0 0 0
+	margin-bottom: 340px 
+	+r(800)
+		width: 100%
+		max-width: 520px
+		text-align: justify
+		font-size: 0.1px
+		margin: 0 auto
+		padding: 60px 0 80px 0
+		&:after
+			content: ""
+			width: 100%
+			display: inline-block
+	+r(600)
+		width: 90%
+	+r(630)
+		width: 260px
+		padding: 30px 0
+	li
+		display: inline-block
+		padding-right: 60px 
+		+r(800)
+			padding: 0px
+			text-align: center
+		a
+			+vertical
+			+fs(26)
+			+novareg
+			line-height: 47px
+			color: #FFF 
+			+r(800)
+				+fs(28)
+				&:before
+					display: none
+			+r(630)
+				+fs(14)
+			&:hover
+				color: #39ecff
+			span
+				display: inline-block
+				vertical-align: middle
+			i
+				display: inline-block
+				vertical-align: middle
+				margin-right: 19px
+				+r(800)
+					display: block
+					margin: 0 auto
+			.address
+				+s(address)
+				+r(800)
+					+s(address-mob)
+				+r(630)
+					display: block
+					width: 43px
+					height: 35px
+					background: url(../img/icons/address-mob.png) no-repeat center center 
+					+cover
+			.transaction
+				+s(transaction)
+				+r(800)
+					+s(transaction-mob)
+				+r(630)
+					display: block
+					width: 38px
+					height: 38px
+					background: url(../img/icons/transaction-mob.png) no-repeat center center 
+					+cover
+			.block
+				+s(block)
+				+r(800)
+					+s(block-mob)
+				+r(630)
+					display: block
+					width: 39px
+					height: 37px
+					background: url(../img/icons/block-mob.png) no-repeat center center 
+					+cover
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.feedback
+	position: absolute
+	bottom: 0
+	right: 0
+	width: 86px
+	height: 86px
+	background: #07b6bf
+	+vertical
+	+r(800)
+		display: none
+	i
+		+s(feedback)
+		display: inline-block
+		vertical-align: middle
+	&:hover
+		background: #fff 
+		i
+			+s(feedback-hover)
+.footer
+	position: relative
+	width: 100%
+	height: 140px
+	clear: both
+	float: left
+	+r(800)
+		background: #0a2035
+		padding-top: 15px
+		height: auto
+		padding-bottom: 20px 
+	+r(630)
+		padding: 7px 0 10px 0 
+	&__text
+		text-align: center
+		h2
+			+novareg
+			color: #FFF 
+			+fs(24)
+			line-height: 44px
+			+r(630)
+				+fs(12)
+				line-height: 20px
+			span
+				color: #1ebcc5
+			&:after
+				display: block
+				margin: 10px auto 20px
+				+s(footer-text)
+				content: ""
+				+r(630)
+					margin: 5px auto 7px
+					+s(footer-txt-mob)
+		p
+			+fs(16)
+			color: #fff 
+			+r(630)
+				+fs(8)
+			span
+				margin-left: 15px
+				+r(630)
+					margin-left: 5px
 
 
 

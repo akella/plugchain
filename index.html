@@ -3,17 +3,130 @@
 <head>
 	<meta charset="utf-8">
 	<title>Template</title>
-	<meta name="viewport" content="initial-scale=1"/>
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
+<!-- BEGIN sidemenu -->
+<div class="sidemenu sign-in">
+	<div class="head">
+		<a href="#" class="chosen"><span>Sign in</span></a>
+		<a href="#"><span>Sign up</span></a>
+	</div>
+	<div class="sidemenu__inner">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<h3>PLEASE SIGN IN<br>TO SEE YOUR API KEYS</h3>
+		<form action="" class="sidemenu__form sign-in__form">
+			<input type="text" placeholder="e-mail">
+			<input type="text" placeholder="password">
+			<button class="sidemenu__submit">log in</button>
+		</form>
+		<a href="#" class="recover">recover password</a>
+	</div>
+	<div class="sidemenu__inner close">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<h3>PLEASE SIGN IN<br>TO SEE YOUR API KEYS</h3>
+		<hr>
+		<h3 class="h3_mod">LIFE TIME FREE</h3>
+		<form action="" class="sidemenu__form sign-in__form">
+			<input type="text" placeholder="e-mail">
+			<input type="text" placeholder="password">
+			<label class="checkbox">
+				<input type="checkbox" name="choice" value="Express">
+				<span class="checkbox__title">I agree with terms of use</span>
+			</label>
+			<button class="sidemenu__submit">SEND<br>CONFIRMATION LETTER</button>
+		</form>
+		<a href="#" class="recover">Already have an account?</a>
+	</div>
+</div>
+<div class="sidemenu profile close">
+	<h2>YOUR ACCOUNT</h2>
+	<div class="sidemenu__inner">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<form action="" class="sidemenu__form profile__form">
+			<label for="" class="profile__label">
+				<span>Api key Id</span>
+				<input type="text" placeholder="837fbaf1170f06487f7e4a16a807e22a">
+			</label>
+			<label for="" class="profile__label">
+				<span>Api key Secret</span>
+				<input type="text" placeholder="837fbaf1170f06487f7e4a16a807e22a">
+			</label>
+			<button class="sidemenu__submit">Logout</button>
+		</form>
+	</div>
+</div>
+<div class="sidemenu menu close">
+	<div class="sidemenu__inner">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<ul class="menu__nav">
+			<li><a href="#" class="is-active">Documentation</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Terms of use</a></li>
+			<li><a href="#">Privicy</a></li>
+			<li><a href="#">Feedback</a></li>
+		</ul>
+		<ul class="menu__log">
+			<li><a href="#">Log in</a></li>
+			<li><a href="#">Sign in</a></li>
+		</ul>
+	</div>
+</div>
+<div class="sidemenu feedback-menu close">
+	<h2>FEEDBACK</h2>
+	<div class="sidemenu__inner">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<h4>IF YOU HAVE ANY QUESTIONS OR SUGGESTIONS PLEASE USE OUR FEEDBACK FORM</h4>
+		<form action="" class="sidemenu__form sign-in__form">
+			<input type="text" placeholder="e-mail">
+			<textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+			<button class="sidemenu__submit">send</button>
+		</form>
+	</div>
+</div>
+<!-- END sidemenu -->
 <!-- BEGIN  out-->
 <div class="out">
-
+	<div class="header">
+		<div class="navigation">
+			<a href="#" class="navigation__menu"></a>
+			<a href="#" class="navigation__plus"></a>
+		</div>
+	</div>
+	<div class="land">
+		<a href="#" class="logo"><img src="img/land-logo.png" alt=""></a>
+		<h1>CRYPTOCOIN <span>API</span></h1>
+		<p>We deliver Easy-to-use multiplatform API for Bitcoin development</p>
+		<h2>JUST TRY IT!</h2>
+		<div class="search">
+			<form action="">
+				<input type="text" class="input-text search__keyword" placeholder="SEARCH Bitcoin Address, Transaction or Block">
+			</form>
+		</div>
+		<p>Check out our samples:</p>
+		<ul class="list">
+			<li><a href="#"><i class="address"></i><span>Adress</span></a></li>
+			<li><a href="#"><i class="transaction"></i><span>Transaction</span></a></li>
+			<li><a href="#"><i class="block"></i><span>Block</span></a></li>
+		</ul>
+	</div>
 </div>
 <!-- END out-->
+
+<!-- BEGIN footer -->
+<div class="footer">
+	<a href="#" class="feedback"><i></i></a>
+	<div class="footer__text">
+		<h2>POWERED BY <span>CEX.IO</span></h2>
+		<p>Terms of use <span>Privacy</span></p>
+	</div>
+</div>
+<!-- END footer -->
+
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

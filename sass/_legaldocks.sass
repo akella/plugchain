@@ -1,0 +1,148 @@
+.docks-bg
+	background: url(../img/docks.jpg) no-repeat center center
+	+cover 
+	margin: 0
+	+box
+	min-height: 100%
+	padding-top: 150px
+	+clr
+	+r(800)
+		padding-top: 123px
+	+r(630)
+		padding-top: 65px
+	&:after
+		display: block
+		width: 100%
+		height: 1px
+		clear: both
+		content: "" 
+	.header
+		position: absolute
+		top: 0
+		left: 0
+		+r(800)
+			position: absolute
+			top: 0
+			left: 0
+		+r(630)
+			position: absolute
+			top: 0
+			left: 0
+.docks-h1
+	+fs(56)
+	color: white
+	+monreg
+	line-height: 54px
+	+r(800)
+		+fs(40)
+		color: #1ebcc5 
+		line-height: 28px
+	+r(630)
+		+fs(20)
+
+.docks
+	width: 100%
+	margin: 0 auto
+	position: relative
+	height: 100%
+	padding-top: 75px
+	max-width: 1230px
+	+box 
+	+rm(1600)
+		padding: 0
+	+r(800)
+		padding-top: 90px
+	+r(630)
+		padding-top: 45px
+	&__left
+		+clr
+		padding-top: 5px
+		float: left
+		position: absolute
+		top: 0
+		left: 0
+		+r(800)
+			width: 100%
+			padding: 0
+		+rm(1600)
+			position: absolute
+			top: 0
+			left: -190px
+			text-align: right
+		a
+			+fs(28)
+			+novareg
+			line-height: 32px
+			margin-bottom: 5px
+			color: #fff 
+			display: block
+			+r(800)
+				+vertical
+				display: block
+				width: 50%
+				float: left
+				+fs(32)
+				text-align: center
+				height: 80px
+				margin: 0
+				background: #0c4566
+				border-bottom: 10px solid #105d79
+				+ttu
+				span
+					display: inline-block
+					vertical-align: middle
+			+r(630)
+				+fs(18)
+				height: 38px
+				border-width: 7px
+		.is-active
+			color: #1ebcc5
+			+r(800)
+				border-bottom-color: #1ebcc5 
+	&__inner
+		overflow-y: auto
+		width: 82.6%
+		margin: 0 auto
+		background: white
+		padding: 8.7% 
+		clear: both
+		+box
+		width: 100%
+		height: 500px
+		h2
+			+fs(28)
+			+novabold
+			color: #414042
+			+r(800)
+				+fs(40)
+			+r(630)
+				+fs(20)
+		h3
+			+fs(20)
+			+novabold
+			color: #414042
+			+r(630)
+				+fs(12)
+		p, ul, li
+			+fs(20)
+			color: #414042 
+			+novalight
+			+r(800)
+				+fs(24)
+				line-height: 28px 
+			+r(630)
+				+fs(12)
+				line-height: 14px 
+			strong
+				+novabold
+				font-weight: normal
+		ul
+			margin-bottom: 10px
+			li
+				padding-bottom: 20px
+				+r(630)
+					padding-bottom: 15px
+		h2, h3, p
+			margin-bottom: 25px 
+			+r(630)
+				margin-bottom: 15px

@@ -1,0 +1,351 @@
+//All da menu
+.sidemenu
+	position: absolute
+	top: 0
+	right: -400px
+	width: 100%
+	max-width: 400px
+	min-height: 100%
+	background: url(../img/sidemenu.jpg) bottom center repeat-x #e5e6e7
+	z-index: 999
+	+transition(width 0.5s linear, right 0.5s linear)
+	overflow: hidden
+	text-align: center
+	+box
+	padding-bottom: 150px
+	+r(800)
+		max-width: 640px
+		right: -640px
+	+r(630)
+		padding-bottom: 75px
+	&__inner
+		width: 317px
+		margin: 0 auto
+		+r(800)
+			width: 100%
+	&__logo
+		margin-bottom: 30px
+		display: inline-block
+		position: relative
+		width: 75%
+		+r(800)
+			margin-bottom: 70px
+			width: 66%
+		img
+			width: 100%
+	h2
+		+novalight
+		color: #455f7e
+		+fs(24)
+		line-height: 36px 
+		margin-bottom: 30px
+		+r(800)
+			+fs(40)
+			margin-bottom: 120px 
+		+r(630)
+			+fs(20)
+			margin-bottom: 40px
+	h3
+		color: #6D6E71
+		+fs(24)
+		+novareg
+		line-height: 1.2
+		+r(800)
+			+fs(40)
+		+r(630)
+			+fs(20)
+	h4
+		color: black
+		+fs(20)
+		+novareg
+		margin-bottom: 35px 
+		+r(800)
+			+fs(32)
+			margin-bottom: 60px 
+			max-width: 500px
+			display: inline-block
+		+r(630)
+			+fs(16)
+			max-width: 260px
+			margin-bottom: 30px
+	.h3_mod
+		margin-bottom: 5px
+		+novabold
+	input, textarea
+		margin-top: 14px
+		width: 100%
+		padding: 13px 12px
+		border-radius: 4px
+		text-align: center
+		+box
+		+novareg
+		+fs(20)
+		+placeholder-color(#a6a8ab)
+		+r(800)
+			width: 79%
+			+fs(32)
+			padding: 21px 15px
+			margin-top: 23px
+		+r(630)
+			+fs(16)
+			padding: 11px 10px 10px 10px
+			margin-top: 11px
+		&:focus
+			+placeholder
+				opacity: 0
+	textarea
+		+fs(16)
+		height: 162px
+		text-align: left
+		border: none
+		resize: none 
+		+r(800)
+			+fs(26)
+			height: 260px
+		+r(630)
+			+fs(14)
+			height: 130px
+	.sidemenu__submit
+		width: 100%
+		height: 70px
+		text-align: center
+		border-radius: 4px
+		+fs(20)
+		+novabold
+		color: #fff
+		+ttu
+		background: #2DBBC3 
+		margin: 14px auto 10px
+		display: block
+		+r(800)
+			width: 79%
+			+fs(32)
+			margin-top: 23px
+			margin-bottom: 20px
+			height: 112px
+		+r(630)
+			height: 55px
+			+fs(16)
+			max-width: 260px
+		&:hover
+			background: #27cbd4
+	.recover
+		color: #808184
+		+fs(20)
+		+novareg
+		+r(800)
+			+fs(32)
+		+r(630)
+			+fs(16)
+		&:hover
+			color: #2dbbc3 
+	hr
+		width: 87px
+		margin: 10px auto 12px
+		background: #6d6e71
+		height: 1px
+		border: none
+	.checkbox
+		text-align: left
+		+vertical
+		+r(800)
+			width: 79%
+			display: block
+			margin: 15px auto 0
+			text-align: left
+		input
+			padding: 0
+			margin: 0
+			width: 33px
+			height: 33px
+			+r(800)
+				display: inline-block
+				width: 54px
+				height: 54px
+			+r(630)
+				width: 27px
+				height: 27px
+.is-open
+	right: 0
+	// width: 100%
+	// max-width: 400px
+.profile
+	padding-top: 30px
+	+r(800)
+		padding-top: 50px
+	+r(630)
+		padding-top: 25px
+	.sidemenu__logo
+		margin-bottom: 20px
+	.profile__form
+		text-align: left
+		.profile__label
+			display: inline-block
+			width: 100%
+			margin-bottom: 20px
+			text-align: center
+			+r(800)
+				margin: 29px 0 6px 0
+			span
+				+fs(20)
+				+novareg
+				color: #a6a8ab 
+				display: block
+				margin: 0 auto
+				+r(800)
+					+fs(32)
+				+r(630)
+					+fs(16)
+			input
+				+fs(16)
+				margin-top: 10px
+				padding-right: 45px
+				text-align: left
+				background: url(../img/icons/profile-input.png) no-repeat 94% 50% white
+				+r(800)
+					+fs(24)
+					padding: 25px 85px 25px 30px
+				+r(630)
+					+fs(16)
+					padding: 13px 45px 12px 15px 
+.menu
+	padding-top: 40px
+	+r(800)
+		padding-top: 65px
+	.menu__nav
+		max-width: 292px
+		margin: 0 auto
+		padding-bottom: 20px
+		border-bottom: 1px solid #bebebf
+		+r(800)
+			max-width: 78%
+			width: 78%
+		li
+			text-align: left
+			a
+				color: #2E3E55
+				+fs(24)
+				+novareg
+				padding: 10px 16px
+				display: block
+				+r(800)
+					+fs(40)
+					letter-spacing: 1px
+					line-height: 80px
+					padding: 0 15px
+					+novalight  
+				+r(630)
+					+fs(20)
+					line-height: 40px
+				&:hover
+					color: #20b5bd 
+			.is-active
+				color: #20b5bd 
+	.menu__log
+		padding: 0 16px
+		max-width: 260px
+		text-align: left
+		margin: 0 auto
+		padding-top: 25px
+		+r(800)
+			max-width: 78%
+			width: 78%
+			padding: 0 15px
+			+box
+		li
+			display: inline-block
+			&:before
+				content: "/"
+				color: #2E3E55
+				+novabold
+				+fs(24)
+				margin: 0 7px 0 5px
+				+r(800)
+					+fs(40)
+					line-height: 120px
+					letter-spacing: 1px
+					margin: 0 8px 0 6px  
+				+r(630)
+					+fs(20)
+					line-height: 80px
+					margin: 0 7px 0 5px 
+			&:first-child
+				&:before
+					display: none
+			a
+				color: #2E3E55
+				+novabold
+				+fs(24)
+				+r(800)
+					+fs(40)
+					line-height: 120px
+					letter-spacing: 1px
+				+r(630)
+					+fs(20)
+					line-height: 80px	
+				&:hover
+					color: #20b5bd 
+.feedback-menu
+	padding-top: 60px
+	+r(800)
+		padding-top: 30px
+	h2
+		+fs(30)
+		line-height: 36px
+		color: #002451
+		margin-bottom: 50px 
+		+r(800)
+			+fs(48)
+			line-height: 58px
+			margin-bottom: 75px
+		+r(630)
+			+fs(24)
+			line-height: 29px
+			margin-bottom: 40px
+			
+.close
+	display: none
+
+.head
+	margin-bottom: 50px
+	+clr
+	+r(800)
+		margin-bottom: 110px
+	+r(630)
+		margin-bottom: 60px
+	a
+		display: block
+		width: 50%
+		height: 141px
+		float: left
+		+vertical
+		background: #192129
+		border-bottom: #CACCCE 1px solid
+		+r(800)
+			height: 103px
+			border-bottom: #192129 1px solid
+		+r(630)
+			height: 112px
+		span
+			display: inline-block
+			vertical-align: middle
+			+novalight
+			+fs(24)
+			line-height: 36px
+			color: #fff
+			opacity: 0.5 
+			+r(800)
+				+fs(40)
+				line-height: 58px
+			+r(630)
+				+fs(20)
+				line-height: 28px
+	.chosen
+		background: #e5e6e7
+		border-bottom-color: #E5E6E7 
+		+r(800) 
+			border-bottom-color: #bec7ce 
+		span
+			color: #1F2C40 
+			opacity: 1 
+	

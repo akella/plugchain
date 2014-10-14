@@ -1,0 +1,228 @@
+.explorer-h1
+	+fs(50)
+	color: #1ebcc5
+	+monreg
+	line-height: 54px
+	+r(800)
+		+fs(40)
+		line-height: 28px
+	+r(630)
+		+fs(20)
+		line-height: 18px
+.explorer
+	max-width: 1190px
+	margin: 0 auto
+	padding: 100px 20px 0px 20px
+	+clr
+	+r(800)
+		padding: 0px 20px 60px 20px
+	+r(630)
+		padding: 25px 10px 30px 10px 
+	form
+		width: 100%
+		position: relative
+		+box
+		padding-right: 210px
+		margin-bottom: 50px
+		+r(800)
+			padding-right: 80px 
+			margin-bottom: 12px 
+		+r(630)
+			padding-right: 40px
+			margin-bottom: 6px
+		div
+			display: inline-block
+			width: 100%
+			position: relative
+			&:before
+				display: inline-block
+				position: absolute
+				top: 50%
+				left: 20px
+				content: ""
+				+s(search-bg)
+				margin-top: -20px
+				z-index: 10 
+				+r(800)
+					left: 15px
+					margin-top: -22px
+					+s(search-mob)
+				+r(630)
+					background: url(../img/icons/search-mob.png) no-repeat center center
+					+cover
+					height: 22px
+					width: 22px
+					margin-top: -11px
+					left: 8px
+		.input-text
+			+r(630)
+				padding: 11px 15px 11px 40px
+				border-radius: 3px
+				+fs(9)
+	&__submit
+		position: absolute
+		top: 0
+		right: 0
+		width: 195px
+		height: 72px
+		background: #1ebcc5
+		border-radius: 7px 
+		+vertical
+		+r(800)
+			width: 67px
+			height: 65px
+		+r(630)
+			width: 33px
+			height: 33px
+			border-radius: 3px
+			display: block
+		&:hover
+			background: #19dae5 
+		span
+			+ttu
+			+novareg
+			+fs(28)
+			color: white
+			display: inline-block
+			vertical-align: middle
+			margin-left: 18px
+			+r(800)
+				display: none
+		i
+			display: inline-block
+			vertical-align: middle
+			+s(docks-button)
+			+r(630)
+				width: 18px
+				height: 22px
+				background: url(../img/icons/docks-button.png) no-repeat center center
+				+cover
+	&__methods
+		padding: 0 0 50px 0
+		+clr
+		+r(800)
+			display: none
+		p
+			+fs(20)
+			color: #fff
+			display: inline-block
+			margin-right: 10px
+	&__buttons
+		float: left
+		padding: 10px 
+	.button
+		width: 100px
+		height: 37px
+		+fs(20)
+		+novareg
+		color: white
+		background: #146d85
+		border-radius: 5px
+		margin: 0 8px 
+		&:hover
+			background: #1ebcc5
+.code-grey
+	padding: 5.5%  8% 5.5%  6%
+	background: #d1d3d4
+	+fs(18)
+	color: #002451
+	+r(800)
+		+fs(24)
+	+r(630)
+		+fs(12)
+		padding: 5.5% 6% 10% 6%
+		line-height: 16px
+	code
+		p
+			text-indent: 15px
+			word-break: break-all
+			font-family: inherit
+			span
+				text-indent: 0 
+				+r(640)
+					display: block
+		.code__p
+			padding: 10px 0
+.code
+	width: 50%
+	float: left
+	+box
+	+r(800)
+		width: 100%
+	h3
+		padding: 25px 25px 20px 25px 
+		color: #fff
+		+fs(24)
+		+novareg
+		line-height: 36px
+		+r(800)
+			+fs(40)
+			line-height: 72px
+			text-align: center
+			padding: 25px 25px 10px 25px
+		+r(630)
+			+fs(24)
+			padding: 20px 20px 10px 20px
+			line-height: 36px
+	div
+		border-top: 10px solid black
+		padding: 10px 20px 0 20px
+		background: #1d2937
+		height: 285px
+		+fs(18)
+		color: #fff
+		line-height: 22px
+		+r(800)
+			padding: 10% 10% 6.5%  6.5%  
+			height: auto
+			+fs(24)
+			border-top-width: 18px 
+		+r(630)
+			+fs(12)
+			line-height: 16px
+			border-top-width: 10px 
+		code
+			p
+				text-indent: 15px
+				word-wrap: break-word
+				font-family: inherit
+.code-left
+	padding-right: 5px
+	+r(800)
+		padding: 0
+	div
+		border-color: #1ebcc5
+		code
+			p
+				span
+					color: #f9d57d 
+.code-right
+	padding-left: 5px
+	+r(800)
+		padding: 0
+	div
+		border-color: #1ebc5a
+		code
+			p
+				span
+					color: #1ebc5a
+
+.exp-foot
+	padding: 20px 0px
+	text-align: justify
+	font-size: 0.1px
+	min-width: 290px
+	display: none
+	clear: both
+	+r(800)
+		display: block
+		width: 600px
+		margin: 0 auto
+	+r(630)
+		padding: 10px 10px 15px 10px
+		font-size: 0.1px
+		width: 300px
+	&:after
+		content: ""
+		width: 100%
+		display: inline-block

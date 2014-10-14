@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<!-- BEGIN sidemenu -->
+<div class="sidemenu sign-in">
+	<div class="head">
+		<a href="#" class="chosen"><span>Sign in</span></a>
+		<a href="#"><span>Sign up</span></a>
+	</div>
+	<div class="sidemenu__inner close">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<h3>PLEASE SIGN IN<br>TO SEE YOUR API KEYS</h3>
+		<form action="" class="sidemenu__form sign-in__form">
+			<input type="text" placeholder="e-mail">
+			<input type="text" placeholder="password">
+			<button class="sidemenu__submit">log in</button>
+		</form>
+		<a href="#" class="recover">recover password</a>
+	</div>
+	<div class="sidemenu__inner close">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<h3>PLEASE SIGN IN<br>TO SEE YOUR API KEYS</h3>
+		<hr>
+		<h3 class="h3_mod">LIFE TIME FREE</h3>
+		<form action="" class="sidemenu__form sign-in__form">
+			<input type="text" placeholder="e-mail">
+			<input type="text" placeholder="password">
+			<label class="checkbox">
+				<input type="checkbox" name="choice" value="Express">
+				<span class="checkbox__title">I agree with terms of use</span>
+			</label>
+			<button class="sidemenu__submit">SEND<br>CONFIRMATION LETTER</button>
+		</form>
+		<a href="#" class="recover">Already have an account?</a>
+	</div>
+</div>
+<div class="sidemenu profile close">
+	<h2>YOUR ACCOUNT</h2>
+	<div class="sidemenu__inner">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<form action="" class="sidemenu__form profile__form">
+			<label for="" class="profile__label">
+				<span>Api key Id</span>
+				<input type="text" placeholder="837fbaf1170f06487f7e4a16a807e22a">
+			</label>
+			<label for="" class="profile__label">
+				<span>Api key Secret</span>
+				<input type="text" placeholder="837fbaf1170f06487f7e4a16a807e22a">
+			</label>
+			<button class="sidemenu__submit">Logout</button>
+		</form>
+	</div>
+</div>
+<div class="sidemenu menu">
+	<div class="sidemenu__inner">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<ul class="menu__nav">
+			<li><a href="#" class="is-active">Documentation</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Terms of use</a></li>
+			<li><a href="#">Privicy</a></li>
+			<li><a href="#">Feedback</a></li>
+		</ul>
+		<ul class="menu__log">
+			<li><a href="#">Log in</a></li>
+			<li><a href="#">Sign in</a></li>
+		</ul>
+	</div>
+</div>
+<div class="sidemenu feedback-menu close">
+	<h2>FEEDBACK</h2>
+	<div class="sidemenu__inner">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<h4>IF YOU HAVE ANY QUESTIONS OR SUGGESTIONS PLEASE USE OUR FEEDBACK FORM</h4>
+		<form action="" class="sidemenu__form sign-in__form">
+			<input type="text" placeholder="e-mail">
+			<textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+			<button class="sidemenu__submit">send</button>
+		</form>
+	</div>
+</div>
+<!-- END sidemenu -->
+<!-- BEGIN  out-->
+<div class="out docks-bg">
+	<div class="header">
+		<a href="#" class="header__logo"><img src="img/logo.png" alt=""></a>
+		<div class="navigation">
+			<a href="#" class="navigation__menu"></a>
+			<a href="#" class="navigation__plus"></a>
+		</div>
+		<h1 class="explorer-h1">ADDRESS</h1>
+	</div>
+	<div class="explorer">
+		<form action="">
+			<div><input type="text" placeholder="198aMn6ZYAczwrE5NvNTUMyJ5qkfy4g3Hi" class="input-text search__keyword"></div>
+			<button class="explorer__submit"><i></i><span>docs</span></button>
+		</form>
+		<div class="explorer__methods">
+			<div class="explorer__buttons">
+				<p>Available API Methods</p>
+				<button class="button">Get</button>
+				<button class="button">Unspent</button>
+			</div>
+			<div class="explorer__buttons is-right">
+				<p>API call to get this transaction View in:</p>
+				<button class="button">RAW</button>
+				<button class="button">Rubby</button>
+				<button class="button">Node.js</button>
+			</div>
+		</div>
+		<div class="code-grey">
+			<code>
+				<p>require 'rubygems' if RUBY_VERSION < '1.9'</p>
+				<p>require 'rest_client'</p>
+				<p class="code__p">values = <span>https://plugchain.com/v1/bitcoin/address/198aMn6ZYAczwrE5NvNTUMyJ5qkfy4g3Hi</span></p>
+				<p>response = RestClient.get <span>'https://plugchain.com/v1/bitcoin/address/198aMn6ZYAczwrE5NvNTUMyJ5qkfy4g3Hi',</span></p>
+				<p>values puts response</p>
+			</code>
+		</div>
+		<div class="code code-left">
+			<h3>Response</h3>
+			<div>
+				<code>
+					<p>"hash": <span>"198aMn6ZYAczwrE5NvNTUMyJ5qkfy4g3Hi"</span>,</p>
+					<p>"sent": <span>0</span>,</p>
+					<p>"received": <span>800000033346</span>,</p>
+					<p>"unconfirmed_sent": <span>0</span>,</p>
+					<p>"unconfirmed_received": <span>0</span>,</p>
+					<p>"balance": <span>800000033346</span>,</p>
+					<p>"unconfirmed_balance": <span>0</span><p>
+					<span>}</span>
+				</code>
+			</div>
+		</div>
+		<div class="code code-right">
+			<h3>In simple</h3>
+			<div>
+				<code>
+					<p>Transaction hash: <span>198aMn6ZYAczwrE5NvNTUMyJ5qkfy4g3Hi</span></p>
+					<p>Total sent: <span>0</span></p>
+					<p>Total received: <span>8000.00033346</span></p>
+					<p>Current balance: <span>8000.00033346</span></p>
+				</code>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END out-->
+
+<!-- BEGIN footer -->
+<div class="footer">
+	<div class="exp-foot">
+		<div class="methods-select ms-first">
+			<p>Available API <br>Methods</p>
+			<div class="select js-select">
+			    <span class="select__text js-select-text">Get</span>
+			    <input type="hidden" class="js-select-input" value="0">
+			    <ul class="select__list js-select-list">
+			        <li data-id="0">Unspent</li>
+			    </ul>
+			</div>
+		</div>
+		<div class="methods-select ms-second">
+			<p>API call to get this transaction View in:</p>
+			<div class="select js-select">
+			    <span class="select__text js-select-text">Rubby</span>
+			    <input type="hidden" class="js-select-input" value="0">
+			    <ul class="select__list js-select-list">
+			        <li data-id="0">RAW</li>
+			        <li data-id="0">Node.js</li>
+			    </ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END footer -->
+
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>
