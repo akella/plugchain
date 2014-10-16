@@ -1,3 +1,33 @@
+.exp-bg
+	background: url(../img/docks.jpg) no-repeat center center
+	+cover 
+	margin: 0
+	+box
+	min-height: 100%
+	padding-top: 150px
+	+clr
+	+r(800)
+		padding-top: 123px
+	+r(630)
+		padding-top: 65px
+	&:after
+		display: block
+		width: 100%
+		height: 0px
+		clear: both
+		content: "" 
+	.header
+		position: absolute
+		top: 0
+		left: 0
+		+r(800)
+			position: absolute
+			top: 0
+			left: 0
+		+r(630)
+			position: absolute
+			top: 0
+			left: 0
 .explorer-h1
 	+fs(50)
 	color: #1ebcc5
@@ -40,16 +70,21 @@
 				top: 50%
 				left: 20px
 				content: ""
-				+s(search-bg)
+				width: 60px
+				height: 40px
+				background: url(../img/svg/search.svg) no-repeat center center
+				background-image: url(../img/icons/search-bg.png) 
+				background-size: cover
 				margin-top: -20px
-				z-index: 10 
 				+r(800)
 					left: 15px
 					margin-top: -22px
-					+s(search-mob)
+					background: url(../img/svg/search.svg) no-repeat center center
+					background-image: url(../img/icons/search-mob.png) 
+					background-size: cover
+					width: 44px
+					height: 44px
 				+r(630)
-					background: url(../img/icons/search-mob.png) no-repeat center center
-					+cover
 					height: 22px
 					width: 22px
 					margin-top: -11px
@@ -91,12 +126,14 @@
 		i
 			display: inline-block
 			vertical-align: middle
-			+s(docks-button)
+			width: 22px
+			height: 29px
+			background: url(../img/svg/search-sub.svg) no-repeat center center
+			background-image: url(../img/icons/docks-button.png)
+			background-size: cover  
 			+r(630)
 				width: 18px
-				height: 22px
-				background: url(../img/icons/docks-button.png) no-repeat center center
-				+cover
+				height: 23px
 	&__methods
 		padding: 0 0 50px 0
 		+clr

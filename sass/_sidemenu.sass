@@ -2,22 +2,25 @@
 .sidemenu
 	position: absolute
 	top: 0
-	right: -400px
+	right: -100%
 	width: 100%
 	max-width: 400px
 	min-height: 100%
 	background: url(../img/sidemenu.jpg) bottom center repeat-x #e5e6e7
-	z-index: 999
-	+transition(width 0.5s linear, right 0.5s linear)
+	z-index: 99999
+	+transition(width 0.5s linear, right 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55))
 	overflow: hidden
 	text-align: center
+	height: 100%
 	+box
 	padding-bottom: 150px
 	+r(800)
-		max-width: 640px
-		right: -640px
+		max-width: 100%
+		right: -100%
+		top: 120px
 	+r(630)
 		padding-bottom: 75px
+		top: 60px
 	&__inner
 		width: 317px
 		margin: 0 auto
@@ -28,11 +31,17 @@
 		display: inline-block
 		position: relative
 		width: 75%
+		height: 0
+		padding-bottom: 18% 
+		background: url(../img/svg/logo-pop.svg) no-repeat center center
+		background-size: cover
 		+r(800)
 			margin-bottom: 70px
 			width: 66%
+			padding-bottom: 15.5% 
 		img
 			width: 100%
+			opacity: 0
 	h2
 		+novalight
 		color: #455f7e
@@ -167,8 +176,10 @@
 				height: 27px
 .is-open
 	right: 0
-	// width: 100%
-	// max-width: 400px
+	height: auto
+	
+.close
+	display: none
 .profile
 	padding-top: 30px
 	+r(800)
@@ -302,9 +313,7 @@
 			+fs(24)
 			line-height: 29px
 			margin-bottom: 40px
-			
-.close
-	display: none
+
 
 .head
 	margin-bottom: 50px

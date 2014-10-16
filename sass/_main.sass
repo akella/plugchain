@@ -4,6 +4,7 @@
 	min-width: 320px 
 	min-height: 100%
 	margin: 0 0 -140px 0
+	height: auto
 	position: relative
 	background: url(../img/background.jpg) no-repeat center center #0d385a
 	+r(800)
@@ -29,6 +30,13 @@
 		position: absolute
 		top: 56px
 		left: 54px
+		display: block
+		width: 65px
+		height: 53px
+		background: url(../img/svg/logo-small1.svg) no-repeat center center
+		background-size: cover
+		img
+			opacity: 0
 		+r(800)
 			display: none
 .navigation
@@ -47,48 +55,60 @@
 		margin: 0 15px
 		float: right
 		position: relative
+		z-index: 99
 		+r(800)
 			margin: 0
 	.navigation__plus
-		+s(plus)
+		background: url(../img/svg/plus.svg) no-repeat center center
+		background-image: url(../img/icons/plus.png)
+		background-size: cover
+		width: 38px
+		height: 38px
+		display: block
 		right: 0
-		+transition(right 0.5s ease, transform 0.5s ease)
+		+transition(right 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), transform 0.5s ease)
 		+r(800)
 			float: left
 			width: 48px
 			height: 48px
-			background: url(../img/icons/plus.png) no-repeat center center
-			+cover
 			margin: 0 0 0 17px
+			+transition(transform 0.3s ease)
 		+r(630)
 			display: block
 			width: 24px
 			height: 24px
 			margin: 0
-			background: url(../img/icons/plus.png) no-repeat center center 
-			+cover
+			+transition(transform 0.2s ease)
 	.navigation__menu
-		+s(menu) 
+		background: url(../img/svg/menu.svg) no-repeat center center
+		background-image: url(../img/icons/menu.png)
+		background-size: cover
+		width: 38px
+		height: 37px
+		display: block
+		right: 0
+		+transition(right 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55))
 		+r(800)
 			width: 48px
 			height: 46px
-			background: url(../img/icons/menu.png) no-repeat center center
-			+cover
 			margin: 0 17px 0 0 
+			+transition(transform 0.3s ease)
 		+r(630)
 			display: block
 			width: 24px
 			height: 24px
 			margin: 0
-			background: url(../img/icons/menu.png) no-repeat center center 
-			+cover
+			+transition(transform 0.2s ease)
 	.navigation__prof
 		+s(prof) 
+		right: 0
+		+transition(right 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55))
 		+r(800)
 			float: left
 			width: 48px
 			height: 46px
 			background: url(../img/icons/prof.png) no-repeat center center
+			+transition(transform 0.3s ease)
 			+cover
 			margin: 0 17px 0 0 
 		+r(630)
@@ -97,14 +117,21 @@
 			height: 24px
 			margin: 0
 			background: url(../img/icons/prof.png) no-repeat center center 
+			+transition(transform 0.2s ease)
 			+cover
 	.is-x
 		right: 350px
-		-moz-transform: rotate(-135deg)
-		-ms-transform: rotate(-135deg)
-		-webkit-transform: rotate(-135deg)
-		-o-transform: rotate(-135deg)
-		transform: rotate(-135deg)
+		-moz-transform: rotate(45deg)
+		-ms-transform: rotate(45deg)
+		-webkit-transform: rotate(45deg)
+		-o-transform: rotate(45deg)
+		transform: rotate(45deg)
+		+r(800)
+			right: 0
+	.is-m
+		right: 380px
+		+r(800)
+			right: 0
 .land
 	text-align: center
 	padding-top: 180px
@@ -124,6 +151,7 @@
 			margin-bottom: 30px
 		img
 			width: 100%
+			opacity: 1
 	h1
 		+fs(45)
 		letter-spacing: -0.2px
@@ -171,15 +199,21 @@
 		top: 50%
 		left: 20px
 		content: ""
-		+s(search-bg)
+		width: 60px
+		height: 40px
+		background: url(../img/svg/search.svg) no-repeat center center
+		background-image: url(../img/icons/search-bg.png) 
+		background-size: cover
 		margin-top: -20px
 		+r(800)
 			left: 15px
 			margin-top: -22px
-			+s(search-mob)
+			background: url(../img/svg/search.svg) no-repeat center center
+			background-image: url(../img/icons/search-mob.png) 
+			background-size: cover
+			width: 44px
+			height: 44px
 		+r(630)
-			background: url(../img/icons/search-mob.png) no-repeat center center
-			+cover
 			height: 22px
 			width: 22px
 			margin-top: -11px
@@ -235,35 +269,53 @@
 					display: block
 					margin: 0 auto
 			.address
-				+s(address)
+				background: url(../img/svg/address.svg) no-repeat center center
+				background-image: url(../img/icons/address.png)
+				background-size: cover
+				width: 45px
+				height: 37px
 				+r(800)
-					+s(address-mob)
+					background: url(../img/svg/address.svg) no-repeat center center
+					background-image: url(../img/icons/address-mob.png)
+					background-size: cover
+					width: 84px
+					height: 69px
 				+r(630)
 					display: block
 					width: 43px
 					height: 35px
-					background: url(../img/icons/address-mob.png) no-repeat center center 
-					+cover
 			.transaction
-				+s(transaction)
+				background: url(../img/svg/transaction.svg) no-repeat center center
+				background-image: url(../img/icons/transaction.png)
+				background-size: cover
+				width: 38px
+				height: 39px
 				+r(800)
-					+s(transaction-mob)
+					background: url(../img/svg/transaction.svg) no-repeat center center
+					background-image: url(../img/icons/transaction-mob.png)
+					background-size: cover
+					width: 75px
+					height: 74px
 				+r(630)
 					display: block
 					width: 38px
 					height: 38px
-					background: url(../img/icons/transaction-mob.png) no-repeat center center 
-					+cover
 			.block
-				+s(block)
+				background: url(../img/svg/block.svg) no-repeat center center
+				background-image: url(../img/icons/block.png)
+				background-size: cover
+				width: 39px
+				height: 37px
 				+r(800)
-					+s(block-mob)
+					background: url(../img/svg/block.svg) no-repeat center center
+					background-image: url(../img/icons/block-mob.png)
+					background-size: cover
+					width: 78px
+					height: 74px
 				+r(630)
 					display: block
 					width: 39px
 					height: 37px
-					background: url(../img/icons/block-mob.png) no-repeat center center 
-					+cover
 
 .feedback
 	position: absolute

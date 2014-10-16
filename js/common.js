@@ -1,8 +1,29 @@
 head.ready(function() {
 
 	$('.navigation__plus').on('click', function() {
-		$(this).parents('body').find('.sidemenu').toggleClass('is-open');
+		$(this).parents('body').find('.menu, .feedback-menu, .profile').removeClass('is-open');
+		$(this).parents('body').find('.sign-in').toggleClass('is-open');
 		$(this).toggleClass('is-x');
+		return false;
+	});
+	$('.navigation__menu').on('click', function() {
+		$(this).parents('body').find('.sign-in, .feedback-menu, .profile').removeClass('is-open');
+		$(this).parents('body').find('.navigation__plus').removeClass('is-x');
+		$(this).parents('body').find('.menu').toggleClass('is-open');
+		$(this).toggleClass('is-m');
+		return false;
+	});
+	$('.feedback').on('click', function() {
+		$(this).parents('body').find('.sign-in, .menu, .profile').removeClass('is-open');
+		$(this).parents('body').find('.navigation__plus').removeClass('is-x');
+		$(this).parents('body').find('.feedback-menu').toggleClass('is-open');
+		return false;
+	});
+	$('.navigation__prof').on('click', function() {
+		$(this).parents('body').find('.sign-in, .menu, .feedback-menu').removeClass('is-open');
+		$(this).parents('body').find('.navigation__plus').removeClass('is-x');
+		$(this).parents('body').find('.profile').toggleClass('is-open');
+		$(this).toggleClass('is-m');
 		return false;
 	});
 	//SELECTS
@@ -44,11 +65,30 @@ head.ready(function() {
 	});
 	//api swith
 	$('.switch__buttons').on('click',function() {
-		$(this).parent('.switch').find('.switch__buttons').toggleClass('is-active');
+		$(this).parent('.switch').find('.switch__buttons').removeClass('is-active');
+		$(this).addClass('is-active')
 		return false;
 	});
-
-
+	//api menu
+	$('.api__tab a').click(function(event) {
+		/* Act on the event */
+		$('.api__tab a').removeClass('is-active');
+		$(this).addClass('is-active');
+		attr = $(this).attr('href');
+		$('#sb,#body,#expl').hide();
+		$(' '+attr).show();
+		return false;
+	});
+	//api menu
+	$('.head a').click(function(event) {
+		/* Act on the event */
+		$('.head a').removeClass('chosen');
+		$(this).addClass('chosen');
+		attr = $(this).attr('href');
+		$('#si1,#si2').hide();
+		$(' '+attr).show();
+		return false;
+	});
 	//scroll
 	$('#pane').jScrollPane({
 	});

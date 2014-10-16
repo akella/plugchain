@@ -10,6 +10,86 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
+
+<!-- BEGIN sidemenu -->
+<div class="sidemenu sign-in">
+	<div class="head">
+		<a href="#si1" class="chosen"><span>Sign in</span></a>
+		<a href="#si2"><span>Sign up</span></a>
+	</div>
+	<div class="sidemenu__inner" id="si1">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<h3>PLEASE SIGN IN<br>TO SEE YOUR API KEYS</h3>
+		<form action="" class="sidemenu__form sign-in__form">
+			<input type="text" placeholder="e-mail">
+			<input type="text" placeholder="password">
+			<button class="sidemenu__submit">log in</button>
+		</form>
+		<a href="#" class="recover">recover password</a>
+	</div>
+	<div class="sidemenu__inner close" id="si2">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<h3>PLEASE SIGN IN<br>TO SEE YOUR API KEYS</h3>
+		<hr>
+		<h3 class="h3_mod">LIFE TIME FREE</h3>
+		<form action="" class="sidemenu__form sign-in__form">
+			<input type="text" placeholder="e-mail">
+			<input type="text" placeholder="password">
+			<label class="checkbox">
+				<input type="checkbox" name="choice" value="Express">
+				<span class="checkbox__title">I agree with terms of use</span>
+			</label>
+			<button class="sidemenu__submit">SEND<br>CONFIRMATION LETTER</button>
+		</form>
+		<a href="#" class="recover">Already have an account?</a>
+	</div>
+</div>
+<div class="sidemenu profile">
+	<h2>YOUR ACCOUNT</h2>
+	<div class="sidemenu__inner">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<form action="" class="sidemenu__form profile__form">
+			<label for="" class="profile__label">
+				<span>Api key Id</span>
+				<input type="text" placeholder="837fbaf1170f06487f7e4a16a807e22a">
+			</label>
+			<label for="" class="profile__label">
+				<span>Api key Secret</span>
+				<input type="text" placeholder="837fbaf1170f06487f7e4a16a807e22a">
+			</label>
+			<button class="sidemenu__submit">Logout</button>
+		</form>
+	</div>
+</div>
+<div class="sidemenu menu">
+	<div class="sidemenu__inner">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<ul class="menu__nav">
+			<li><a href="#" class="is-active">Documentation</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Terms of use</a></li>
+			<li><a href="#">Privicy</a></li>
+			<li><a href="#">Feedback</a></li>
+		</ul>
+		<ul class="menu__log">
+			<li><a href="#">Log in</a></li>
+			<li><a href="#">Sign in</a></li>
+		</ul>
+	</div>
+</div>
+<div class="sidemenu feedback-menu">
+	<h2>FEEDBACK</h2>
+	<div class="sidemenu__inner">
+		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+		<h4>IF YOU HAVE ANY QUESTIONS OR SUGGESTIONS PLEASE USE OUR FEEDBACK FORM</h4>
+		<form action="" class="sidemenu__form sign-in__form">
+			<input type="text" placeholder="e-mail">
+			<textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+			<button class="sidemenu__submit">send</button>
+		</form>
+	</div>
+</div>
+<!-- END sidemenu -->
 <!-- BEGIN  out-->
 <div class="out out_api">
 	<div class="header">
@@ -18,17 +98,23 @@
 			<a href="#" class="navigation__menu"></a>
 			<a href="#" class="navigation__prof"></a>
 		</div>
+		<h1>documentation</h1>
 	</div>
 	<div class="api">
 		<div class="api__in">
-			<div class="api__sidebar">
+			<ul class="api__tabs">
+				<li class="api__tab api__sb is-active-tab"><a href="#sb" class="is-active">Menu</a></li>
+				<li class="api__tab api__body"><a href="#body">Body</a></li>
+				<li class="api__tab api__expl"><a href="#expl">Example</a></li>
+			</ul>
+			<div class="api__sidebar" id="sb">
 				<div class="sidebar-in">
 					<h2><a href="#">INTRODUCTION</a></h2>
 					<ul class="nav">
 						<li><a href="#" class="nav__item">Authentication</a></li>
 						<li><a href="#" class="nav__item">Errors</a></li>
 					</ul>
-					<h2><a href="#">REFERENCE</a></h2>
+					<h2><a href="#" class="is-active">REFERENCE</a></h2>
 					<ul class="nav">
 						<li><a href="#" class="nav__item">Versioning</a></li>
 						<li><a href="#" class="nav__item is-active">Security</a>
@@ -43,7 +129,7 @@
 				</div>
 			</div>
 			<div class="api__content">
-				<div class="api__inner">
+				<div class="api__inner is-close" id="body">
 					<div class="api__center">
 						<h1>PLUGCHAIN API BETA</h1>
 						<hr>
@@ -52,7 +138,7 @@
 						<h2>API description</h2>
 						<hr>
 						<h4>API endpoint</h4>
-						<div class="api__link">
+						<div class="api__links">
 							<ul>
 								<li><span>plugchain.com/v1/bitcoin</span> - for Bitcoin</li>
 								<li><span>plugchain.com/v1/litecoin</span> - for Litecoin</li>
@@ -78,7 +164,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="api__right">
+				<div class="api__right is-close" id="expl">
 					<div class="api__top">
 						<div class="api__select">
 							<i></i>
@@ -110,8 +196,7 @@
 						<div class="hash">
 							<div class="hash__left"><p>block_hash</p></div>
 							<div class="hash__right">
-								<p class="mark">Blockchain block to get information about</p>
-								<p class="p_mod">String</p>
+								<p class="mark">Blockchain block to get information about<span class="p_mod">String</span></p>
 								<div class="hash__example">
 									<p>Example: <span>000000000000034a7dedef4a161fa058a2d67a173a90155f3a2fe6fc132e0ebf</span></p>
 								</div>
@@ -119,17 +204,59 @@
 						</div>
 						<h2>Request</h2>
 						<hr>
-						<ul class="request">
-							<li>1 https://plugchain.com/v1/bitcoin/block/000000000000034a7dedef4a161fa058a2d67a173a90155f3a2fe6fc132e0ebf</li>
-						</ul>
+						<ol class="request">
+							<li>1 <span class="request__link">https:<span>//plugchain.com/v1/bitcoin/block/000000000000034a7dedef4a161fa058a2d67a173a90155f3a2fe6fc132e0ebf</span></span></li>
+						</ol>
 						<h2>Response</h2>
 						<hr>
 						<span class="api__numbers">200</span>
 						<div class="content-type">
-							<p><span>Content-Type:</span> application/json</p>
+							<hr>
+							<code><span>Content-Type:</span> application/json</code>
+							<hr>
 						</div>
 						<div class="api__screen">
 							<img src="img/api-screen.png" alt="">
+						</div>
+					</div>
+					<div class="api__fixed">
+						<div class="api__fixed-in">
+							<div class="select-left">
+								<p>Language</p>
+								<div class="api-select ms-first">
+									<div class="select js-select">
+									    <span class="select__text js-select-text">Node.js</span>
+									    <input type="hidden" class="js-select-input" value="0">
+									    <ul class="select__list js-select-list">
+									        <li data-id="0">Unspent</li>
+									    </ul>
+									</div>
+								</div>
+							</div>
+							<div class="select-left select-mob">
+								<p>Host</p>
+								<div class="api-select ms-first api-select_mod">
+									<div class="select js-select">
+									    <span class="select__text js-select-text">Debugung... proxy</span>
+									    <input type="hidden" class="js-select-input" value="0">
+									    <ul class="select__list js-select-list">
+									        <li data-id="0">Unspent</li>
+									    </ul>
+									</div>
+								</div>
+							</div>
+							<div class="select-right">
+								<p>Type</p>
+								<div class="api-select ms-first">
+									<div class="select js-select">
+									    <span class="select__text js-select-text">Example</span>
+									    <input type="hidden" class="js-select-input" value="0">
+									    <ul class="select__list js-select-list">
+									        <li data-id="0">Console</li>
+									    </ul>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>	
