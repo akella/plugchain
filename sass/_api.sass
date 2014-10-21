@@ -89,6 +89,7 @@
 		position: relative
 		z-index: 100
 		+box
+		//width: 260px
 		+r(1100)
 			width: 100%
 			height: 100%
@@ -129,6 +130,8 @@
 		padding-left: 295px
 		width: 100%
 		+box
+		// margin-left: -260px
+		// padding-left: 260px
 		+r(1100)
 			width: 100%
 			padding: 0
@@ -137,10 +140,12 @@
 	&__inner
 		float: left
 		height: 100%
-		width: 50%
+		width: 55%
 		overflow-y: auto
 		overflow-x: hidden
 		background: #f1f2f2 
+		&.is-show
+			width: 100%
 		+r(1100)
 			width: 100%
 	&__center
@@ -245,13 +250,15 @@
 					+novabold
 	&__right
 		float: left
-		width: 50%
+		width: 45%
 		height: 100%
 		overflow-y: auto
 		overflow-x: hidden
 		background: #1d2937 
 		position: relative
 		+clr
+		&.is-hide
+			display: none
 		+r(1100)
 			width: 100%
 			+box 
@@ -277,7 +284,7 @@
 				line-height: 28px
 				padding-bottom: 0
 	&__top
-		padding: 30px 45px 15px 40px
+		padding: 3% 4.5% 1.5% 4%
 		background: #19222c
 		+clr 
 		text-align: justify
@@ -295,16 +302,24 @@
 			width: 23px
 			height: 38px
 			display: inline-block
-			margin-right: 35px
-			float: left
 			margin-top: 5px
+			vertical-align: top
+			margin-right: 5px
+			margin-bottom: 10px
+			cursor: pointer
 	&__select
 		display: inline-block
 		text-align: left
 		width: 100%
-		max-width: 350px 
+		max-width: 310px 
 		margin-bottom: 10px 
 		vertical-align: top
+		text-align: justify
+		font-size: 0.1px
+		&:after
+			content: ""
+			width: 100%
+			display: inline-block
 	&__switch
 		padding: 4px
 		background: #273e4b
@@ -325,7 +340,7 @@
 			opacity: 1
 			background: #60acc5
 	&__way
-		padding: 45px
+		padding: 4.5%
 		background: #1f3244 
 		+r(1100)
 			padding: 30px
@@ -366,7 +381,7 @@
 			.is-active
 				+novabold
 	&__right-in
-		padding: 30px 40px
+		padding: 3% 4%
 		+r(1100)
 			padding: 30px 30px 150px 30px
 		+r(630)
@@ -388,6 +403,8 @@
 	&__link
 		+novalight
 		color: #bcbec0 
+		-ms-word-break: break-all
+		word-break: break-all
 		span
 			color: #e62d68 
 	&__numbers

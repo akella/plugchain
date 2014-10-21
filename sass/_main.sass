@@ -10,6 +10,13 @@
 	+r(800)
 		margin: 0
 		background: #0d385a
+	&.vertical
+		display: flex
+		justify-content: center
+		align-items: center
+.wrapper
+	width: 100%
+	max-width: 1200px 
 	&:after
 		display: block
 		content: ""
@@ -24,6 +31,10 @@
 	padding-top: 50px
 	text-align: center
 	padding-bottom: 45px
+	&.absolute-top
+		position: absolute
+		top: 0
+		left: 0
 	+r(630)
 		padding: 16px 0 0 0 
 	&__logo
@@ -66,19 +77,19 @@
 		height: 38px
 		display: block
 		right: 0
-		+transition(right 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), transform 0.5s ease)
+		+transition(right 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55), transform 0.7s ease)
 		+r(800)
 			float: left
 			width: 48px
 			height: 48px
 			margin: 0 0 0 17px
-			+transition(transform 0.3s ease)
+			+transition(transform 0.5s ease)
 		+r(630)
 			display: block
 			width: 24px
 			height: 24px
 			margin: 0
-			+transition(transform 0.2s ease)
+			+transition(transform 0.3s ease)
 	.navigation__menu
 		background: url(../img/svg/menu.svg) no-repeat center center
 		background-image: url(../img/icons/menu.png)
@@ -87,28 +98,28 @@
 		height: 37px
 		display: block
 		right: 0
-		+transition(right 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55))
+		+transition(right 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55))
 		+r(800)
 			width: 48px
 			height: 46px
 			margin: 0 17px 0 0 
-			+transition(transform 0.3s ease)
+			+transition(transform 0.5s ease)
 		+r(630)
 			display: block
 			width: 24px
 			height: 24px
 			margin: 0
-			+transition(transform 0.2s ease)
+			+transition(transform 0.3s ease)
 	.navigation__prof
 		+s(prof) 
 		right: 0
-		+transition(right 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55))
+		+transition(right 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55))
 		+r(800)
 			float: left
 			width: 48px
 			height: 46px
 			background: url(../img/icons/prof.png) no-repeat center center
-			+transition(transform 0.3s ease)
+			+transition(transform 0.5s ease)
 			+cover
 			margin: 0 17px 0 0 
 		+r(630)
@@ -117,7 +128,7 @@
 			height: 24px
 			margin: 0
 			background: url(../img/icons/prof.png) no-repeat center center 
-			+transition(transform 0.2s ease)
+			+transition(transform 0.3s ease)
 			+cover
 	.is-x
 		right: 350px
@@ -134,7 +145,9 @@
 			right: 0
 .land
 	text-align: center
-	padding-top: 180px
+	width: 100%
+	max-width: 1200px
+	padding-top: 100px
 	+r(800)
 		padding-top: 90px
 	+r(630)
@@ -221,7 +234,6 @@
 
 .list
 	padding: 45px 0 0 0
-	margin-bottom: 340px 
 	+r(800)
 		width: 100%
 		max-width: 520px
@@ -240,7 +252,7 @@
 		padding: 30px 0
 	li
 		display: inline-block
-		padding-right: 60px 
+		padding: 0 30px
 		+r(800)
 			padding: 0px
 			text-align: center
@@ -318,13 +330,14 @@
 					height: 37px
 
 .feedback
-	position: absolute
+	position: fixed
 	bottom: 0
 	right: 0
 	width: 86px
 	height: 86px
 	background: #07b6bf
 	+vertical
+	z-index: 999999
 	+r(800)
 		display: none
 	i

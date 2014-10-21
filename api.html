@@ -10,7 +10,6 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
-
 <!-- BEGIN sidemenu -->
 <div class="sidemenu sign-in">
 	<div class="head">
@@ -45,20 +44,22 @@
 	</div>
 </div>
 <div class="sidemenu profile">
-	<h2>YOUR ACCOUNT</h2>
-	<div class="sidemenu__inner">
-		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
-		<form action="" class="sidemenu__form profile__form">
-			<label for="" class="profile__label">
-				<span>Api key Id</span>
-				<input type="text" placeholder="837fbaf1170f06487f7e4a16a807e22a">
-			</label>
-			<label for="" class="profile__label">
-				<span>Api key Secret</span>
-				<input type="text" placeholder="837fbaf1170f06487f7e4a16a807e22a">
-			</label>
-			<button class="sidemenu__submit">Logout</button>
-		</form>
+	<div class="in">
+		<h2>YOUR ACCOUNT</h2>
+		<div class="sidemenu__inner">
+			<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+			<form action="" class="sidemenu__form profile__form">
+				<label for="" class="profile__label">
+					<span>Api key Id</span>
+					<input type="text" placeholder="837fbaf1170f06487f7e4a16a807e22a">
+				</label>
+				<label for="" class="profile__label">
+					<span>Api key Secret</span>
+					<input type="text" placeholder="837fbaf1170f06487f7e4a16a807e22a">
+				</label>
+				<button class="sidemenu__submit">Logout</button>
+			</form>
+		</div>
 	</div>
 </div>
 <div class="sidemenu menu">
@@ -78,15 +79,17 @@
 	</div>
 </div>
 <div class="sidemenu feedback-menu">
-	<h2>FEEDBACK</h2>
-	<div class="sidemenu__inner">
-		<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
-		<h4>IF YOU HAVE ANY QUESTIONS OR SUGGESTIONS PLEASE USE OUR FEEDBACK FORM</h4>
-		<form action="" class="sidemenu__form sign-in__form">
-			<input type="text" placeholder="e-mail">
-			<textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-			<button class="sidemenu__submit">send</button>
-		</form>
+	<div class="in">
+		<h2>FEEDBACK</h2>
+		<div class="sidemenu__inner">
+			<a href="#" class="sidemenu__logo"><img src="img/sidemenu-logo.png" alt=""></a>
+			<h4>IF YOU HAVE ANY QUESTIONS OR SUGGESTIONS PLEASE USE OUR FEEDBACK FORM</h4>
+			<form action="" class="sidemenu__form sign-in__form">
+				<input type="text" placeholder="e-mail">
+				<textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+				<button class="sidemenu__submit">send</button>
+			</form>
+		</div>
 	</div>
 </div>
 <!-- END sidemenu -->
@@ -167,7 +170,7 @@
 				<div class="api__right is-close" id="expl">
 					<div class="api__top">
 						<div class="api__select">
-							<i></i>
+							<i class="api-arrow"></i>
 							<div class="api-select ms-first">
 								<div class="select js-select">
 								    <span class="select__text js-select-text">Node.js</span>

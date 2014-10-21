@@ -1,6 +1,14 @@
 //All da menu
+.head, .sidemenu__inner, .in
+	opacity: 0
+	visibility: hidden
+	+transition(opacity 0.5s ease 0.8s)
+	+r(800)
+		+transition(opacity 0.5s ease 0.4s)
+	+r(630)
+		+transition(opacity 0.5s ease 0.3s)
 .sidemenu
-	position: absolute
+	position: fixed
 	top: 0
 	right: -100%
 	width: 100%
@@ -8,22 +16,31 @@
 	min-height: 100%
 	background: url(../img/sidemenu.jpg) bottom center repeat-x #e5e6e7
 	z-index: 99999
-	+transition(width 0.5s linear, right 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55))
+	+transition(width 0.7s linear, right 0.7s linear)
 	overflow: hidden
 	text-align: center
 	height: 100%
 	+box
-	padding-bottom: 150px
+	padding-bottom: 75px
+	-ms-overflow-y: auto
+	overflow-y: auto
+	+clr
+	min-width: 320px 
 	+r(800)
 		max-width: 100%
 		right: -100%
 		top: 120px
+		+transition(width 0.3s linear, right 0.3s linear)
+		position: absolute
+	+r(630)
+		+transition(width 0.2s linear, right 0.2s linear)
 	+r(630)
 		padding-bottom: 75px
 		top: 60px
 	&__inner
 		width: 317px
 		margin: 0 auto
+		+clr
 		+r(800)
 			width: 100%
 	&__logo
@@ -176,8 +193,13 @@
 				height: 27px
 .is-open
 	right: 0
-	height: auto
-	
+	height: 100%
+	+r(800)
+		height: auto
+	.sidemenu__inner, .in, .head
+		opacity: 1
+		visibility: visible
+
 .close
 	display: none
 .profile
@@ -318,6 +340,7 @@
 .head
 	margin-bottom: 50px
 	+clr
+	min-width: 320px 
 	+r(800)
 		margin-bottom: 110px
 	+r(630)
@@ -357,4 +380,5 @@
 		span
 			color: #1F2C40 
 			opacity: 1 
-	
+
+

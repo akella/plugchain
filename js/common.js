@@ -3,6 +3,7 @@ head.ready(function() {
 	$('.navigation__plus').on('click', function() {
 		$(this).parents('body').find('.menu, .feedback-menu, .profile').removeClass('is-open');
 		$(this).parents('body').find('.sign-in').toggleClass('is-open');
+		$(this).parents('body').find('.navigation__menu').removeClass('is-m');
 		$(this).toggleClass('is-x');
 		return false;
 	});
@@ -16,6 +17,7 @@ head.ready(function() {
 	$('.feedback').on('click', function() {
 		$(this).parents('body').find('.sign-in, .menu, .profile').removeClass('is-open');
 		$(this).parents('body').find('.navigation__plus').removeClass('is-x');
+		$(this).parents('body').find('.navigation__menu').removeClass('is-m');
 		$(this).parents('body').find('.feedback-menu').toggleClass('is-open');
 		return false;
 	});
@@ -89,7 +91,9 @@ head.ready(function() {
 		$(' '+attr).show();
 		return false;
 	});
-	//scroll
-	$('#pane').jScrollPane({
+	//api docks
+	$('.api-arrow').on('click', function() {
+		$(this).parents('.api').find('.api__inner').toggleClass('is-show');
+		$(this).parents('.api').find('.api__right').toggleClass('is-hide');
 	});
 });
