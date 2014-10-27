@@ -102,12 +102,13 @@
 				margin: 0 0 15px 0
 			a
 				+fs(18)
-				color: #1ebcc5
+				color: #fff
 				padding: 3px 15px 1px 37px
 				border-radius: 0 4px 4px 0
 				display: inline-block
 				+novareg
 				+ttu
+				+transition(all 0.5s)
 				+r(1100)
 					+fs(32)
 					padding: 25px 15px 20px 75px
@@ -117,11 +118,12 @@
 					padding: 10px 10px 10px 35px
 					+fs(18) 
 				&:hover
-					color: #fff
-					background: #1ebcc5 
+					color: #1ebcc5
 			.is-active
 				color: #fff
 				background: #1ebcc5 
+				&:hover
+					color: #fff 
 	&__content
 		float: left
 		+clr
@@ -296,8 +298,8 @@
 			width: 100%
 			display: inline-block
 		i
-			background: url(../img/svg/arr-left.svg) no-repeat center center
-			background-image: url(../img/icons/api-top-arr.png)
+			background: url(../img/icons/api-top-arr.png) no-repeat center center
+			background-image: url(../img/svg/arr-left.svg)
 			background-size: cover 
 			width: 23px
 			height: 38px
@@ -320,6 +322,20 @@
 			content: ""
 			width: 100%
 			display: inline-block
+		.select__list
+			position: absolute
+			top: 100%
+			left: 0
+			right: 0
+			background: #1b3c52 
+			+r(1100)
+				position: relative
+				top: auto
+				left: auto
+				right: auto
+		.select
+			&.is-active
+				border-radius: 5px 5px 0 0
 	&__switch
 		padding: 4px
 		background: #273e4b
@@ -662,8 +678,8 @@
 			+r(630)
 				width: 19px
 				height: 17px
-				background: url(../img/svg/btn-arr.svg) no-repeat center center
-				background-image: url(../img/icons/btn-arr.png)
+				background: url(../img/icons/btn-arr.png) no-repeat center center
+				background-image: url(../img/svg/btn-arr.svg)
 				background-size: cover
 				margin-top: -8px
 				right: 10px 
@@ -677,8 +693,8 @@
 				+r(630)
 					width: 19px
 					height: 17px
-					background: url(../img/svg/btn-arr-hov.svg) no-repeat center center
-					background-image: url(../img/icons/btn-arr-hov.png)
+					background: url(../img/icons/btn-arr-hov.png) no-repeat center center
+					background-image: url(../img/svg/btn-arr-hov.svg)
 					background-size: cover
 					margin-top: -8px
 					right: 10px 

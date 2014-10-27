@@ -2,38 +2,39 @@
 .head, .sidemenu__inner, .in
 	opacity: 0
 	visibility: hidden
-	+transition(opacity 0.5s ease 0.8s)
+	+transition(opacity 0.5s ease 0.6s)
 	+r(800)
 		+transition(opacity 0.5s ease 0.4s)
 	+r(630)
 		+transition(opacity 0.5s ease 0.3s)
 .sidemenu
 	position: fixed
-	top: 0
-	right: -100%
 	width: 100%
 	max-width: 400px
 	min-height: 100%
 	background: url(../img/sidemenu.jpg) bottom center repeat-x #e5e6e7
 	z-index: 99999
-	+transition(width 0.7s linear, right 0.7s linear)
 	overflow: hidden
 	text-align: center
-	height: 100%
 	+box
 	padding-bottom: 75px
 	-ms-overflow-y: auto
 	overflow-y: auto
 	+clr
 	min-width: 320px 
+	top: 0
+	right: 0
+	height: 100%
+	-webkit-transition: all 0.5s
+	transition: all 0.5s
+	visibility: visible
+	-webkit-transform: translate3d(100%, 0, 0)
+	transform: translate3d(100%, 0, 0)
 	+r(800)
 		max-width: 100%
 		right: -100%
 		top: 120px
-		+transition(width 0.3s linear, right 0.3s linear)
 		position: absolute
-	+r(630)
-		+transition(width 0.2s linear, right 0.2s linear)
 	+r(630)
 		padding-bottom: 75px
 		top: 60px
@@ -104,6 +105,7 @@
 		border-radius: 4px
 		text-align: center
 		+box
+		color: #3a3a3a 
 		+novareg
 		+fs(20)
 		+placeholder-color(#a6a8ab)
@@ -184,6 +186,7 @@
 			margin: 0
 			width: 33px
 			height: 33px
+			color: #3a3a3a 
 			+r(800)
 				display: inline-block
 				width: 54px
@@ -194,6 +197,9 @@
 .is-open
 	right: 0
 	height: 100%
+	visibility: visible
+	-webkit-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)
 	+r(800)
 		height: auto
 	.sidemenu__inner, .in, .head
@@ -234,6 +240,7 @@
 				margin-top: 10px
 				padding-right: 45px
 				text-align: left
+				color: #3a3a3a 
 				background: url(../img/icons/profile-input.png) no-repeat 94% 50% white
 				+r(800)
 					+fs(24)

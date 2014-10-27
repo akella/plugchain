@@ -4,13 +4,17 @@ head.ready(function() {
 		$(this).parents('body').find('.menu, .feedback-menu, .profile').removeClass('is-open');
 		$(this).parents('body').find('.sign-in').toggleClass('is-open');
 		$(this).parents('body').find('.navigation__menu').removeClass('is-m');
+		$(this).parents('body').find('.feedback').removeClass('is-feed');
+		$(this).parents('body').find('.feedback-close').removeClass('is-cl');
 		$(this).toggleClass('is-x');
 		return false;
 	});
 	$('.navigation__menu').on('click', function() {
 		$(this).parents('body').find('.sign-in, .feedback-menu, .profile').removeClass('is-open');
 		$(this).parents('body').find('.navigation__plus').removeClass('is-x');
+		$(this).parents('body').find('.feedback').removeClass('is-feed');
 		$(this).parents('body').find('.menu').toggleClass('is-open');
+		$(this).parents('body').find('.feedback-close').removeClass('is-cl');
 		$(this).toggleClass('is-m');
 		return false;
 	});
@@ -19,15 +23,33 @@ head.ready(function() {
 		$(this).parents('body').find('.navigation__plus').removeClass('is-x');
 		$(this).parents('body').find('.navigation__menu').removeClass('is-m');
 		$(this).parents('body').find('.feedback-menu').toggleClass('is-open');
+		$(this).parents('body').find('.feedback-close').toggleClass('is-cl');
+		$(this).toggleClass('is-feed');
 		return false;
 	});
 	$('.navigation__prof').on('click', function() {
 		$(this).parents('body').find('.sign-in, .menu, .feedback-menu').removeClass('is-open');
 		$(this).parents('body').find('.navigation__plus').removeClass('is-x');
+		$(this).parents('body').find('.feedback').removeClass('is-feed');
 		$(this).parents('body').find('.profile').toggleClass('is-open');
+		$(this).parents('body').find('.feedback-close').removeClass('is-cl');
 		$(this).toggleClass('is-m');
 		return false;
 	});
+	$('.out').on('click', function() {
+		$(this).parents('body').find('.sidemenu').removeClass('is-open');
+		$(this).parents('body').find('.navigation__plus').removeClass('is-x');
+		$(this).parents('body').find('.navigation__menu, .navigation__prof').removeClass('is-m');
+		$(this).parents('body').find('.feedback').removeClass('is-feed');
+		$(this).parents('body').find('.feedback-close').removeClass('is-cl');
+	});
+	$('.feedback-close').on('click', function() {
+		$(this).parents('body').find('.sidemenu').removeClass('is-open');
+		$(this).parents('body').find('.feedback').removeClass('is-feed');
+		$(this).parents('body').find('.feedback-close').removeClass('is-cl');
+		return false;
+	});
+
 	//SELECTS
 	$(document).ready(function() {
 	    $(document).click(function() {
@@ -93,7 +115,12 @@ head.ready(function() {
 	});
 	//api docks
 	$('.api-arrow').on('click', function() {
-		$(this).parents('.api').find('.api__inner').toggleClass('is-show');
-		$(this).parents('.api').find('.api__right').toggleClass('is-hide');
+		$(this).parents('.api').find('.api__inner').addClass('is-show');
+		$(this).parents('.api').find('.api__right').addClass('is-hide');
+	});
+	//api docks
+	$('.blocks__button').on('click', function() {
+		$(this).parents('.api').find('.api__inner').removeClass('is-show');
+		$(this).parents('.api').find('.api__right').removeClass('is-hide');
 	});
 });

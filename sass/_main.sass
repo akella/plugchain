@@ -7,6 +7,10 @@
 	height: auto
 	position: relative
 	background: url(../img/background.jpg) no-repeat center center #0d385a
+	+transition(right 0.5s)
+	right: 0
+	&.is-out
+		right: 400px
 	+r(800)
 		margin: 0
 		background: #0d385a
@@ -70,14 +74,14 @@
 		+r(800)
 			margin: 0
 	.navigation__plus
-		background: url(../img/svg/plus.svg) no-repeat center center
-		background-image: url(../img/icons/plus.png)
+		background: url(../img/icons/plus.png) no-repeat center center
+		background-image: url(../img/svg/plus.svg)
 		background-size: cover
-		width: 38px
-		height: 38px
+		width: 39px
+		height: 39px
 		display: block
 		right: 0
-		+transition(right 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55), transform 0.7s ease)
+		+transition(right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.5s linear)
 		+r(800)
 			float: left
 			width: 48px
@@ -91,14 +95,41 @@
 			margin: 0
 			+transition(transform 0.3s ease)
 	.navigation__menu
-		background: url(../img/svg/menu.svg) no-repeat center center
-		background-image: url(../img/icons/menu.png)
-		background-size: cover
+		// background: url(../img/icons/menu.png) no-repeat center center
+		// background-image: url(../img/svg/menu.svg)
+		// background-size: cover
 		width: 38px
 		height: 37px
 		display: block
 		right: 0
-		+transition(right 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55))
+		+transition(right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275))
+		overflow: hidden
+		span
+			width: 100%
+			height: 5px
+			background: white
+			display: block 
+			margin-bottom: 11px 
+			+transition(transform 0.5s ease 0.5s, background 0.3s ease 0.8s)
+			position: absolute
+			top: 50%
+			left: 0
+			&:before, &:after
+				position: absolute
+				left: 0px
+				width: 100%
+				height: 100%
+				background: none repeat scroll 0% 0% #FFF
+				content: ""
+				+transition(transform 0.3s ease 0.8s)
+			&:before
+				-webkit-transform: translateY(-250%)
+				transform: translateY(-250%)
+			&:after
+				-webkit-transform: translateY(250%)
+				transform: translateY(250%)
+			&.is-fl, &.is-tl
+				display: none
 		+r(800)
 			width: 48px
 			height: 46px
@@ -113,7 +144,7 @@
 	.navigation__prof
 		+s(prof) 
 		right: 0
-		+transition(right 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55))
+		+transition(right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275))
 		+r(800)
 			float: left
 			width: 48px
@@ -130,8 +161,10 @@
 			background: url(../img/icons/prof.png) no-repeat center center 
 			+transition(transform 0.3s ease)
 			+cover
+		&.is-m
+			right: 310px
 	.is-x
-		right: 350px
+		right: 310px
 		-moz-transform: rotate(45deg)
 		-ms-transform: rotate(45deg)
 		-webkit-transform: rotate(45deg)
@@ -141,6 +174,30 @@
 			right: 0
 	.is-m
 		right: 380px
+		position: relative
+		span
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			&.is-sl
+				background: none 
+				&:after
+					transform: translateY(0px) rotate(-45deg)
+				&:before
+					transform: translateY(0px) rotate(45deg)
+			&.is-fl
+				-moz-transform: rotate(45deg)
+				-ms-transform: rotate(45deg)
+				-webkit-transform: rotate(45deg)
+				-o-transform: rotate(45deg)
+				transform: rotate(45deg)
+			&.is-tl
+				-moz-transform: rotate(-45deg)
+				-ms-transform: rotate(-45deg)
+				-webkit-transform: rotate(-45deg)
+				-o-transform: rotate(-45deg)
+				transform: rotate(-45deg)
 		+r(800)
 			right: 0
 .land
@@ -214,15 +271,15 @@
 		content: ""
 		width: 60px
 		height: 40px
-		background: url(../img/svg/search.svg) no-repeat center center
-		background-image: url(../img/icons/search-bg.png) 
+		background: url(../img/icons/search-bg.png) no-repeat center center
+		background-image: url(../img/svg/search.svg) 
 		background-size: cover
 		margin-top: -20px
 		+r(800)
 			left: 15px
 			margin-top: -22px
-			background: url(../img/svg/search.svg) no-repeat center center
-			background-image: url(../img/icons/search-mob.png) 
+			background: url(../img/icons/search-mob.png) no-repeat center center
+			background-image: url(../img/svg/search.svg) 
 			background-size: cover
 			width: 44px
 			height: 44px
@@ -262,6 +319,7 @@
 			+novareg
 			line-height: 47px
 			color: #FFF 
+			+transition(color 0.5s ease)
 			+r(800)
 				+fs(28)
 				&:before
@@ -281,14 +339,14 @@
 					display: block
 					margin: 0 auto
 			.address
-				background: url(../img/svg/address.svg) no-repeat center center
-				background-image: url(../img/icons/address.png)
+				background: url(../img/icons/address.png) no-repeat center center
+				background-image: url(../img/svg/address.svg)
 				background-size: cover
 				width: 45px
 				height: 37px
 				+r(800)
-					background: url(../img/svg/address.svg) no-repeat center center
-					background-image: url(../img/icons/address-mob.png)
+					background: url(../img/icons/address-mob.png) no-repeat center center
+					background-image: url(../img/svg/address.svg)
 					background-size: cover
 					width: 84px
 					height: 69px
@@ -297,14 +355,14 @@
 					width: 43px
 					height: 35px
 			.transaction
-				background: url(../img/svg/transaction.svg) no-repeat center center
-				background-image: url(../img/icons/transaction.png)
+				background: url(../img/icons/transaction.png) no-repeat center center
+				background-image: url(../img/svg/transaction.svg)
 				background-size: cover
 				width: 38px
 				height: 39px
 				+r(800)
-					background: url(../img/svg/transaction.svg) no-repeat center center
-					background-image: url(../img/icons/transaction-mob.png)
+					background: url(../img/icons/transaction-mob.png) no-repeat center center
+					background-image: url(../img/svg/transaction.svg)
 					background-size: cover
 					width: 75px
 					height: 74px
@@ -313,14 +371,14 @@
 					width: 38px
 					height: 38px
 			.block
-				background: url(../img/svg/block.svg) no-repeat center center
-				background-image: url(../img/icons/block.png)
+				background: url(../img/icons/block.png) no-repeat center center
+				background-image: url(../img/svg/block.svg)
 				background-size: cover
 				width: 39px
 				height: 37px
 				+r(800)
-					background: url(../img/svg/block.svg) no-repeat center center
-					background-image: url(../img/icons/block-mob.png)
+					background: url(../img/icons/block-mob.png) no-repeat center center
+					background-image: url(../img/svg/block.svg)
 					background-size: cover
 					width: 78px
 					height: 74px
@@ -338,6 +396,9 @@
 	background: #07b6bf
 	+vertical
 	z-index: 999999
+	+transition(background 0.5s ease, right 0.5s)
+	&.is-feed
+		right: 400px
 	+r(800)
 		display: none
 	i
@@ -348,12 +409,49 @@
 		background: #fff 
 		i
 			+s(feedback-hover)
+	&-close
+		background: url(../img/icons/plus.png) no-repeat center center
+		background-image: url(../img/svg/plus.svg)
+		background-size: cover
+		width: 39px
+		height: 39px
+		display: block
+		visibility: hidden
+		opacity: 0
+		right: 50px
+		position: fixed
+		top: 58px
+		+transition(right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.5s linear, opacity 0.5s ease)
+		+r(800)
+			display: none
+		&.is-cl
+			right: 430px
+			-moz-transform: rotate(45deg)
+			-ms-transform: rotate(45deg)
+			-webkit-transform: rotate(45deg)
+			-o-transform: rotate(45deg)
+			transform: rotate(45deg)
+			visibility: visible
+			opacity: 1
+			+r(800)
+				right: 0
 .footer
 	position: relative
 	width: 100%
 	height: 140px
 	clear: both
 	float: left
+	right: 0
+	+transition(right 0.5s)
+	&.f-fix
+		position: fixed
+		bottom: 0
+		left: 0
+		right: 0
+	&.is-foot
+		right: 400px
+		.feedback
+			right: 400px
 	+r(800)
 		background: #0a2035
 		padding-top: 15px
@@ -371,7 +469,7 @@
 			+r(630)
 				+fs(12)
 				line-height: 20px
-			span
+			a
 				color: #1ebcc5
 			&:after
 				display: block
@@ -382,14 +480,17 @@
 					margin: 5px auto 7px
 					+s(footer-txt-mob)
 		p
-			+fs(16)
-			color: #fff 
 			+r(630)
 				+fs(8)
-			span
-				margin-left: 15px
+			a
+				+fs(16)
+				color: #fff 
+				margin: 0 8px
+				+transition(color 0.5s)
+				&:hover
+					color: #1ebcc5 
 				+r(630)
-					margin-left: 5px
+					margin-left: 0 3px
 
 
 

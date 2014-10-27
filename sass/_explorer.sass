@@ -8,8 +8,10 @@
 	+clr
 	+r(800)
 		padding-top: 123px
+		padding-bottom: 230px 
 	+r(630)
 		padding-top: 65px
+		padding-bottom: 130px 
 	&:after
 		display: block
 		width: 100%
@@ -72,15 +74,15 @@
 				content: ""
 				width: 60px
 				height: 40px
-				background: url(../img/svg/search.svg) no-repeat center center
-				background-image: url(../img/icons/search-bg.png) 
+				background: url(../img/icons/search-bg.png) no-repeat center center
+				background-image: url(../img/svg/search.svg) 
 				background-size: cover
 				margin-top: -20px
 				+r(800)
 					left: 15px
 					margin-top: -22px
-					background: url(../img/svg/search.svg) no-repeat center center
-					background-image: url(../img/icons/search-mob.png) 
+					background: url(../img/icons/search-mob.png) no-repeat center center
+					background-image: url(../img/svg/search.svg) 
 					background-size: cover
 					width: 44px
 					height: 44px
@@ -102,6 +104,7 @@
 		height: 72px
 		background: #1ebcc5
 		border-radius: 7px 
+		+transition(background 0.5s)
 		+vertical
 		+r(800)
 			width: 67px
@@ -121,6 +124,8 @@
 			display: inline-block
 			vertical-align: middle
 			margin-left: 18px
+			line-height: 20px
+			padding: 2px 0 0 
 			+r(800)
 				display: none
 		i
@@ -128,8 +133,8 @@
 			vertical-align: middle
 			width: 22px
 			height: 29px
-			background: url(../img/svg/search-sub.svg) no-repeat center center
-			background-image: url(../img/icons/docks-button.png)
+			background: url(../img/icons/docks-button.png) no-repeat center center
+			background-image: url(../img/svg/search-sub.svg)
 			background-size: cover  
 			+r(630)
 				width: 18px
@@ -156,6 +161,7 @@
 		background: #146d85
 		border-radius: 5px
 		margin: 0 8px 
+		+transition(background 0.5s)
 		&:hover
 			background: #1ebcc5
 .code-grey

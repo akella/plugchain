@@ -3,8 +3,10 @@
 	+cover 
 	margin: 0
 	+box
-	height: 100%
+	min-height: 100%
 	padding-top: 150px
+	margin: 0 0 -140px 0
+	padding-bottom: 50px
 	+clr
 	+r(800)
 		padding-top: 123px
@@ -12,10 +14,11 @@
 		padding-top: 65px
 	&:after
 		display: block
+		content: ""
 		width: 100%
-		height: 0px
-		clear: both
-		content: "" 
+		height: 140px
+		+r(800)
+			display: none
 	.header
 		position: absolute
 		top: 0
@@ -48,6 +51,7 @@
 	padding-top: 75px
 	max-width: 1230px
 	+box 
+	+clr
 	+rm(1600)
 		padding: 0
 	+r(800)
@@ -101,15 +105,12 @@
 			+r(800)
 				border-bottom-color: #1ebcc5 
 	&__inner
-		overflow-y: auto
-		//width: 82.6%
 		margin: 0 auto
 		background: white
 		padding: 8.7% 
 		clear: both
 		+box
 		width: 100%
-		height: 100%
 		h2
 			+fs(28)
 			+novabold
