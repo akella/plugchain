@@ -36,6 +36,7 @@
 	padding-top: 50px
 	text-align: center
 	padding-bottom: 45px
+	z-index: 99 
 	&.absolute-top
 		position: absolute
 		top: 0
@@ -507,7 +508,7 @@
 
 
 body
-	.out, .footer, .feedback
+	.out, .footer, .feedback, .header
 		+transition(transform 0.5s ease)
 	.feedback
 		+transition(background 0.5s, right 0.5s, transform 0.5s ease)
@@ -532,7 +533,7 @@ body
 			-webkit-transition: opacity 0.5s
 			transition: opacity 0.5s
 			z-index: 999
-		.out, .footer, .feedback
+		.out, .footer, .feedback, .header
 			-webkit-transform: translate3d(-400px, 0, 0)
 			transform: translate3d(-400px, 0, 0)
 		
