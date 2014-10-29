@@ -150,6 +150,8 @@
 		+transition(right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275))
 		position: relative
 		z-index: 9999
+		svg
+			display: none
 		+r(800)
 			float: left
 			width: 48px
@@ -168,6 +170,8 @@
 			+cover
 		&.is-m
 			right: 310px
+			+r(800)
+				right: 0
 	.is-x
 		right: 310px
 		-moz-transform: rotate(45deg)

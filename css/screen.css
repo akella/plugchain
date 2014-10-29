@@ -138,9 +138,11 @@ a { text-decoration: none; }
 @media only screen and (max-width: 800px) { .navigation .navigation__menu { width: 48px; height: 46px; margin: 0 17px 0 0; -moz-transition: -moz-transform 0.5s ease; -o-transition: -o-transform 0.5s ease; -webkit-transition: -webkit-transform 0.5s ease; transition: transform 0.5s ease; } }
 @media only screen and (max-width: 630px) { .navigation .navigation__menu { display: block; width: 24px; height: 24px; margin: 0; -moz-transition: -moz-transform 0.3s ease; -o-transition: -o-transform 0.3s ease; -webkit-transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; } }
 .navigation .navigation__prof { background: url('../img/icons-s131fd12ce9.png') 0 -721px no-repeat; width: 39px; height: 40px; right: 0; -moz-transition: right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275); -o-transition: right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275); -webkit-transition: right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275); transition: right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; z-index: 9999; }
+.navigation .navigation__prof svg { display: none; }
 @media only screen and (max-width: 800px) { .navigation .navigation__prof { float: left; width: 48px; height: 46px; background: url(../img/icons/prof.png) no-repeat center center; -moz-transition: -moz-transform 0.5s ease; -o-transition: -o-transform 0.5s ease; -webkit-transition: -webkit-transform 0.5s ease; transition: transform 0.5s ease; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; margin: 0 17px 0 0; } }
 @media only screen and (max-width: 630px) { .navigation .navigation__prof { display: block; width: 24px; height: 24px; margin: 0; background: url(../img/icons/prof.png) no-repeat center center; -moz-transition: -moz-transform 0.3s ease; -o-transition: -o-transform 0.3s ease; -webkit-transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } }
 .navigation .navigation__prof.is-m { right: 310px; }
+@media only screen and (max-width: 800px) { .navigation .navigation__prof.is-m { right: 0; } }
 .navigation .is-x { right: 310px; -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
 @media only screen and (max-width: 800px) { .navigation .is-x { right: 0; } }
 .navigation .is-m { right: 380px; position: relative; background: url(../img/icons/plus.png) no-repeat center center; background-image: url(../img/svg/plus.svg); background-size: cover; transform: translateY(0px) rotate(-45deg); }
@@ -289,7 +291,6 @@ body.is-body .out, body.is-body .footer, body.is-body .feedback, body.is-body .h
 @media only screen and (max-width: 630px) { .sidemenu .checkbox input { width: 27px; height: 27px; } }
 
 .is-open { right: 0; height: 100%; visibility: visible; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-@media only screen and (max-width: 800px) { .is-open { height: auto; } }
 .is-open .sidemenu__inner, .is-open .in, .is-open .head { opacity: 1; visibility: visible; }
 
 .close { display: none; }
