@@ -1,55 +1,122 @@
 head.ready(function() {
 
+	// $('.navigation__plus').on('click', function() {
+	// 	$('.menu, .feedback-menu, .profile').removeClass('is-open');
+	// 	$('.sign-in').toggleClass('is-open');
+	// 	if($( '.profile').hasClass('is-open');) {}
+	// 	$(this).parents('body').toggleClass('is-body');
+	// 	$(this).parents('body').find('.navigation__menu').removeClass('is-m');
+	// 	$(this).toggleClass('is-x');
+	// 	return false;
+	// });
 	$('.navigation__plus').on('click', function() {
-		$(this).parents('body').find('.menu, .feedback-menu, .profile').removeClass('is-open');
-		$(this).parents('body').find('.sign-in').toggleClass('is-open');
-		$(this).parents('body').find('.navigation__menu').removeClass('is-m');
-		$(this).parents('body').find('.feedback').removeClass('is-feed');
-		$(this).parents('body').find('.feedback-close').removeClass('is-cl');
+		if($('.sign-in').hasClass('is-open')) {
+			$('.sign-in, .menu, .profile, .feedback-menu').removeClass('is-open');
+		}
+		else {
+			$('.navigation__menu, .navigation__prof').removeClass('is-m');
+			$('.sign-in').addClass('is-open');
+		}
+		if($('body').hasClass('is-body')) {
+			$('body').addClass('is-body');
+		}
+		else {
+			$('body').toggleClass('is-body');
+		}
+		if($('.navigation__plus').hasClass('is-x')) {
+			$('body').removeClass('is-body');
+		}
+		else {
+			$('.feedback__menu, .menu, .profile').removeClass('is-open');
+			$('body').addClass('is-body');
+		}
 		$(this).toggleClass('is-x');
 		return false;
 	});
-	$('.navigation__menu').on('click', function() {
-		$(this).parents('body').find('.sign-in, .feedback-menu, .profile').removeClass('is-open');
-		$(this).parents('body').find('.navigation__plus').removeClass('is-x');
-		$(this).parents('body').find('.feedback').removeClass('is-feed');
-		$(this).parents('body').find('.menu').toggleClass('is-open');
-		$(this).parents('body').find('.feedback-close').removeClass('is-cl');
-		$(this).toggleClass('is-m');
-		return false;
-	});
+
 	$('.feedback').on('click', function() {
-		$(this).parents('body').find('.sign-in, .menu, .profile').removeClass('is-open');
-		$(this).parents('body').find('.navigation__plus').removeClass('is-x');
-		$(this).parents('body').find('.navigation__menu').removeClass('is-m');
-		$(this).parents('body').find('.feedback-menu').toggleClass('is-open');
-		$(this).parents('body').find('.feedback-close').toggleClass('is-cl');
+		if($('.feedback-menu').hasClass('is-open')) {
+			$('.sign-in, .menu, .profile, .feedback-menu').removeClass('is-open');
+		}
+		else {
+			$('.feedback-menu').addClass('is-open');
+			$('.navigation__plus').removeClass('is-x');
+			$('.navigation__menu, .navigation__prof').removeClass('is-m');
+		}
+		if($('body').hasClass('is-body')) {
+			$('body').addClass('is-body');
+		}
+		else {
+			$('body').removeClass('is-body');
+		}
+		if($('.feedback').hasClass('is-feed')) {
+			$('body').removeClass('is-body');
+		}
+		else {
+			$('.sign-in, .menu, .profile').removeClass('is-open');
+			$('body').addClass('is-body');
+		}
 		$(this).toggleClass('is-feed');
 		return false;
 	});
-	$('.navigation__prof').on('click', function() {
-		$(this).parents('body').find('.sign-in, .menu, .feedback-menu').removeClass('is-open');
-		$(this).parents('body').find('.navigation__plus').removeClass('is-x');
-		$(this).parents('body').find('.feedback').removeClass('is-feed');
-		$(this).parents('body').find('.profile').toggleClass('is-open');
-		$(this).parents('body').find('.feedback-close').removeClass('is-cl');
+	$('.navigation__menu').on('click', function() {
+		if($('.menu').hasClass('is-open')) {
+			$('.sign-in, .menu, .profile, .feedback-menu').removeClass('is-open');
+		}
+		else {
+			$('.menu').addClass('is-open');
+			$('.navigation__plus').removeClass('is-x');
+			$('.navigation__menu, .navigation__prof').removeClass('is-m');
+		}
+		if($('body').hasClass('is-body')) {
+			$('body').addClass('is-body');
+		}
+		else {
+			$('body').removeClass('is-body');
+		}
+		if($('.navigation__menu').hasClass('is-m')) {
+			$('body').removeClass('is-body');
+		}
+		else {
+			$('.sign-in, .feedback__menu, .profile').removeClass('is-open');
+			$('body').addClass('is-body');
+		}
 		$(this).toggleClass('is-m');
 		return false;
 	});
-	$('.out').on('click', function() {
-		$(this).parents('body').find('.sidemenu').removeClass('is-open');
-		$(this).parents('body').find('.navigation__plus').removeClass('is-x');
-		$(this).parents('body').find('.navigation__menu, .navigation__prof').removeClass('is-m');
-		$(this).parents('body').find('.feedback').removeClass('is-feed');
-		$(this).parents('body').find('.feedback-close').removeClass('is-cl');
-	});
-	$('.feedback-close').on('click', function() {
-		$(this).parents('body').find('.sidemenu').removeClass('is-open');
-		$(this).parents('body').find('.feedback').removeClass('is-feed');
-		$(this).parents('body').find('.feedback-close').removeClass('is-cl');
+	$('.navigation__prof').on('click', function() {
+		if($('.profile').hasClass('is-open')) {
+			$('.sign-in, .menu, .profile, .feedback-menu').removeClass('is-open');
+		}
+		else {
+			$('.profile').addClass('is-open');
+			$('.navigation__plus').removeClass('is-x');
+			$('.navigation__menu, .navigation__prof').removeClass('is-m');
+		}
+		if($('body').hasClass('is-body')) {
+			$('body').addClass('is-body');
+		}
+		else {
+			$('body').removeClass('is-body');
+		}
+		if($('.navigation__prof').hasClass('is-m')) {
+			$('body').removeClass('is-body');
+		}
+		else {
+			$('.sign-in, .feedback__menu, .menu').removeClass('is-open');
+			$('body').addClass('is-body');
+		}
+		$(this).toggleClass('is-m');
 		return false;
 	});
-
+	$('.overlay').on('click', function() {
+		$(this).parents('body').find('.menu, .feedback-menu, .profile, .sign-in').removeClass('is-open');
+		$(this).parent('body').removeClass('is-body');
+		$(this).parents('body').find('.navigation__menu, .navigation__prof').removeClass('is-m');
+		$(this).parents('body').find('.feedback').removeClass('is-feed');
+		$(this).parents('body').find('.navigation__plus').removeClass('is-x');
+		return false;
+	});
 	//SELECTS
 	$(document).ready(function() {
 	    $(document).click(function() {
@@ -109,8 +176,8 @@ head.ready(function() {
 		$('.head a').removeClass('chosen');
 		$(this).addClass('chosen');
 		attr = $(this).attr('href');
-		$('#si1,#si2').hide();
-		$(' '+attr).show();
+		$('#si1,#si2').removeClass('close');
+		$(' '+attr).addClass('close');
 		return false;
 	});
 	//api docks

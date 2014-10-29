@@ -1,31 +1,30 @@
 .out_api
 	margin: 0
 	height: 100%
+	background: #0d385a
 	&:after
 		display: none
-	.header
-		height: 50px
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		background: #0d385a
-		z-index: 9999
+.header__api
+	height: 50px
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	+r(1100)
+		height: 30px
+	h1
+		+fs(40)
+		position: relative
+		+monreg
+		color: #1ebcc5
+		display: none
+		+ttu
+		line-height: 28px
 		+r(1100)
-			height: 30px
-		h1
-			+fs(40)
-			position: relative
-			+monreg
-			color: #1ebcc5
-			display: none
-			+ttu
+			display: block
+		+r(630)
+			+fs(20)
 			line-height: 28px
-			+r(1100)
-				display: block
-			+r(630)
-				+fs(20)
-				line-height: 28px
 .api
 	height: 100%
 	+box

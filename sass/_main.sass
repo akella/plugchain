@@ -6,7 +6,7 @@
 	margin: 0 0 -140px 0
 	height: auto
 	position: relative
-	background: url(../img/background.jpg) no-repeat center center #0d385a
+	background: url(../img/background.jpg) center center #0d385a
 	+transition(right 0.5s)
 	right: 0
 	&.is-out
@@ -21,6 +21,7 @@
 .wrapper
 	width: 100%
 	max-width: 1200px 
+	margin: 0 auto 
 	&:after
 		display: block
 		content: ""
@@ -74,14 +75,21 @@
 		+r(800)
 			margin: 0
 	.navigation__plus
-		background: url(../img/icons/plus.png) no-repeat center center
-		background-image: url(../img/svg/plus.svg)
-		background-size: cover
 		width: 39px
 		height: 39px
 		display: block
 		right: 0
-		+transition(right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.5s linear)
+		+transition(right 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.5s linear)
+		position: relative
+		z-index: 9999
+		svg
+			width: 100%
+			height: 100%  
+		line
+			+transition(stroke 0.5s)
+		&:hover
+			line
+				stroke: #07b6bf
 		+r(800)
 			float: left
 			width: 48px
@@ -95,40 +103,34 @@
 			margin: 0
 			+transition(transform 0.3s ease)
 	.navigation__menu
-		// background: url(../img/icons/menu.png) no-repeat center center
-		// background-image: url(../img/svg/menu.svg)
-		// background-size: cover
 		width: 38px
 		height: 37px
 		display: block
 		right: 0
 		+transition(right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275))
 		overflow: hidden
-		span
+		position: relative
+		z-index: 9999
+		svg
 			width: 100%
-			height: 5px
-			background: white
-			display: block 
-			margin-bottom: 11px 
-			+transition(transform 0.5s ease 0.5s, background 0.3s ease 0.8s)
-			position: absolute
-			top: 50%
-			left: 0
-			&:before, &:after
-				position: absolute
-				left: 0px
-				width: 100%
-				height: 100%
-				background: none repeat scroll 0% 0% #FFF
-				content: ""
-				+transition(transform 0.3s ease 0.8s)
-			&:before
-				-webkit-transform: translateY(-250%)
-				transform: translateY(-250%)
-			&:after
-				-webkit-transform: translateY(250%)
-				transform: translateY(250%)
-			&.is-fl, &.is-tl
+			height: 100%  
+		line
+			+transition(stroke 0.5s)
+		&:hover
+			line
+				stroke: #07b6bf
+		div
+			height: 100%
+			width: 100%
+		.nav-x
+			display: none
+		&.is-m
+			background: none 
+			&:hover
+				background: none
+			.nav-x
+				display: block
+			.nav-m
 				display: none
 		+r(800)
 			width: 48px
@@ -145,6 +147,8 @@
 		+s(prof) 
 		right: 0
 		+transition(right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275))
+		position: relative
+		z-index: 9999
 		+r(800)
 			float: left
 			width: 48px
@@ -175,29 +179,35 @@
 	.is-m
 		right: 380px
 		position: relative
-		span
-			position: absolute
-			top: 50%
-			left: 0
-			right: 0
-			&.is-sl
-				background: none 
-				&:after
-					transform: translateY(0px) rotate(-45deg)
-				&:before
-					transform: translateY(0px) rotate(45deg)
-			&.is-fl
-				-moz-transform: rotate(45deg)
-				-ms-transform: rotate(45deg)
-				-webkit-transform: rotate(45deg)
-				-o-transform: rotate(45deg)
-				transform: rotate(45deg)
-			&.is-tl
-				-moz-transform: rotate(-45deg)
-				-ms-transform: rotate(-45deg)
-				-webkit-transform: rotate(-45deg)
-				-o-transform: rotate(-45deg)
-				transform: rotate(-45deg)
+		background: url(../img/icons/plus.png) no-repeat center center
+		background-image: url(../img/svg/plus.svg)
+		background-size: cover
+		transform: translateY(0px) rotate(-45deg)
+		&:hover
+			background-image: url(../img/svg/plus-hov.svg)
+		// span
+		// 	position: absolute
+		// 	top: 50%
+		// 	left: 0
+		// 	right: 0
+		// 	&.is-sl
+		// 		background: none 
+		// 		&:after
+		// 			transform: translateY(0px) rotate(-45deg)
+		// 		&:before
+		// 			transform: translateY(0px) rotate(45deg)
+		// 	&.is-fl
+		// 		-moz-transform: rotate(45deg)
+		// 		-ms-transform: rotate(45deg)
+		// 		-webkit-transform: rotate(45deg)
+		// 		-o-transform: rotate(45deg)
+		// 		transform: rotate(45deg)
+		// 	&.is-tl
+		// 		-moz-transform: rotate(-45deg)
+		// 		-ms-transform: rotate(-45deg)
+		// 		-webkit-transform: rotate(-45deg)
+		// 		-o-transform: rotate(-45deg)
+		// 		transform: rotate(-45deg)
 		+r(800)
 			right: 0
 .land
@@ -205,6 +215,7 @@
 	width: 100%
 	max-width: 1200px
 	padding-top: 100px
+	margin: 0 auto
 	+r(800)
 		padding-top: 90px
 	+r(630)
@@ -396,45 +407,44 @@
 	background: #07b6bf
 	+vertical
 	z-index: 999999
-	+transition(background 0.5s ease, right 0.5s)
 	&.is-feed
-		right: 400px
+		i
+			display: none
+		.nav-x
+			display: inline-block
+			vertical-align: middle
+			width: 51px
+			height: 51px
+			-moz-transform: rotate(45deg)
+			-ms-transform: rotate(45deg)
+			-webkit-transform: rotate(45deg)
+			-o-transform: rotate(45deg)
+			transform: rotate(45deg)
+			svg
+				width: 100%
+				height: 100%  
+			line
+				+transition(stroke 0.5s)
+			div
+				height: 100%
+				width: 100%
+		&:hover
+			.nav-x
+				line
+					stroke: #07b6bf
 	+r(800)
 		display: none
 	i
 		+s(feedback)
 		display: inline-block
 		vertical-align: middle
+	.nav-x
+		display: none
 	&:hover
 		background: #fff 
 		i
 			+s(feedback-hover)
-	&-close
-		background: url(../img/icons/plus.png) no-repeat center center
-		background-image: url(../img/svg/plus.svg)
-		background-size: cover
-		width: 39px
-		height: 39px
-		display: block
-		visibility: hidden
-		opacity: 0
-		right: 50px
-		position: fixed
-		top: 58px
-		+transition(right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.5s linear, opacity 0.5s ease)
-		+r(800)
-			display: none
-		&.is-cl
-			right: 430px
-			-moz-transform: rotate(45deg)
-			-ms-transform: rotate(45deg)
-			-webkit-transform: rotate(45deg)
-			-o-transform: rotate(45deg)
-			transform: rotate(45deg)
-			visibility: visible
-			opacity: 1
-			+r(800)
-				right: 0
+
 .footer
 	position: relative
 	width: 100%
@@ -448,6 +458,9 @@
 		bottom: 0
 		left: 0
 		right: 0
+	&.f-c
+		+r(800)
+			display: none
 	&.is-foot
 		right: 400px
 		.feedback
@@ -493,8 +506,36 @@
 					margin-left: 0 3px
 
 
-
-
+body
+	.out, .footer, .feedback
+		+transition(transform 0.5s ease)
+	.feedback
+		+transition(background 0.5s, right 0.5s, transform 0.5s ease)
+	.overlay
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		width: 0
+		height: 0
+		background: rgba(0,0,0,0.5)
+		content: ''
+		opacity: 0
+		-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+		transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+	&.is-body
+		.overlay
+			width: 100%
+			height: 100%
+			opacity: 1
+			-webkit-transition: opacity 0.5s
+			transition: opacity 0.5s
+			z-index: 999
+		.out, .footer, .feedback
+			-webkit-transform: translate3d(-400px, 0, 0)
+			transform: translate3d(-400px, 0, 0)
+		
 
 
 

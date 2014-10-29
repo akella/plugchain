@@ -25,8 +25,8 @@
 	top: 0
 	right: 0
 	height: 100%
-	-webkit-transition: all 0.5s
-	transition: all 0.5s
+	-webkit-transition: all 0.5s ease
+	transition: all 0.5s ease
 	visibility: visible
 	-webkit-transform: translate3d(100%, 0, 0)
 	transform: translate3d(100%, 0, 0)
@@ -34,7 +34,6 @@
 		max-width: 100%
 		right: -100%
 		top: 120px
-		position: absolute
 	+r(630)
 		padding-bottom: 75px
 		top: 60px
@@ -145,6 +144,7 @@
 		background: #2DBBC3 
 		margin: 14px auto 10px
 		display: block
+		+transition(background 0.5s)
 		+r(800)
 			width: 79%
 			+fs(32)
@@ -360,6 +360,7 @@
 		+vertical
 		background: #192129
 		border-bottom: #CACCCE 1px solid
+		+transition(background 0.5s, border-color 0.5s)
 		+r(800)
 			height: 103px
 			border-bottom: #192129 1px solid
@@ -388,4 +389,22 @@
 			color: #1F2C40 
 			opacity: 1 
 
-
+.ins
+	opacity: 0 
+	+transition(opacity 0.5s ease)
+.close
+	display: block
+	.ins
+		opacity: 1
+.ins-show
+	display: block
+	.ins
+		opacity: 1
+.sign-in
+	.sidemenu__inner
+		position: absolute
+		top: 192px
+		left: 0
+		right: 0
+		bottom: 0
+		padding-bottom: 50px
