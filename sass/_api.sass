@@ -87,12 +87,20 @@
 		background: #192129
 		position: relative
 		z-index: 100
+		z-index: 99999
 		+box
-		//width: 260px
+		&.is-swiped
+			+r(1100)
+				left: 0
 		+r(1100)
 			width: 100%
 			height: 100%
 			padding-bottom: 50px
+			position: fixed
+			overflow: auto
+			top: 0
+			left: -100%
+			+tr(left 0.3s linear)
 		h2
 			margin: 10px 0 25px 0
 			+r(1100)
@@ -107,7 +115,7 @@
 				display: inline-block
 				+novareg
 				+ttu
-				+transition(all 0.5s)
+				+transition(color 0.5s, background 0.5s)
 				+r(1100)
 					+fs(32)
 					padding: 25px 15px 20px 75px
@@ -763,3 +771,186 @@
 .is-close
 	+r(1100)
 		display: none
+		
+.con
+	background: #d0d7da
+	height: 100%
+	&__top
+		padding: 3% 4%
+		background: #a6aaab 
+		+r(1100) 
+			padding: 30px
+		+r(630)
+			padding: 10px 20px 
+	.api__prelink
+		color: #19222c
+	.api__link
+		color: #505153
+		span
+			color: #e62d68
+	&__body
+		padding: 3% 4%
+		background: #d0d7da
+		+r(1100) 
+			padding: 30px 30px 150px 30px
+		+r(630)
+			padding: 20px 20px 75px 20px
+	&__buttons
+		padding: 3px
+		background: #a3afb5 
+		+border-radius(4px)
+		+clr
+		margin-bottom: 20px
+		ul
+			li
+				width: 33%
+				float: left
+				&.is-first
+					width: 34%
+	&__button
+		display: block
+		margin: 2px 
+		text-align: center
+		height: 64px
+		+vertical
+		+border-radius(4px)
+		background: #c2c8ca
+		+tr(background 0.5s) 
+		+r(630)
+			height: 32px
+		&.is-active
+			background: #3e5562
+			span
+				color: #fff 
+		span
+			display: inline-block
+			vertical-align: middle
+			+fs(18)
+			color: #7c8b93
+			+tr(color 0.5s)
+			+r(630)
+				+fs(11)
+
+		&:hover
+			background: #1ebcc5 
+			span
+				color: #FFF
+	&__hash
+		padding: 20px 30px
+		+clr
+		background: #f1f2f2
+		+border-radius(4px)
+		margin-bottom: 20px
+		+r(630)
+			padding: 5px 10px 
+	&__left
+		width: 33%
+		float: left
+		display: block
+		+novabold
+		+fs(20)
+		color: #ef4136 
+		+r(630)
+			+fs(12)
+			width: 40%
+	&__right
+		width: 62%
+		padding-left: 3% 
+		float: left	
+		display: block
+		-ms-word-wrap: break-word
+		word-wrap: break-word
+		+novalight
+		+fs(20)
+		color: #838382 
+		+r(630)
+			+fs(12)
+			width: 57%
+	&__btns
+		text-align: justify
+		+fs(0.1)
+		word-spacing: 0px
+		max-width: 575px
+		margin: 0 auto 20px
+		&:after
+			content: ""
+			width: 100%
+			display: inline-block 
+	&__btn
+		width: 48%
+		max-width: 280px
+		display: inline-block
+		+vertical
+		background: #7c8b93
+		+tr(background 0.5s)
+		+border-radius(4px)
+		&:hover
+			background: #1ebcc5 
+		span
+			display: inline-block
+			vertical-align: middle
+			color: #E6E7E8 
+			+fs(26)
+			+novabold
+			padding: 14px
+			+r(630)
+				+fs(16)
+	h2
+		color: #3e5562
+		margin-top: 20px
+		margin-bottom: 30px
+		padding: 0
+		float: left
+		width: 100%
+		display: block
+	hr
+		width: 100%
+		margin: 0 0 30px
+		border: none
+		background: #2c2c2e
+		height: 1px 
+		border-top: #9da2a4 1px solid
+		border-bottom: #afb2b5 1px solid
+		opacity: 0.4 
+		&.hr_mod
+			border-top-color: #4e5152
+			border-bottom-color: #b4b7ba
+			background: #75787a   
+			opacity: 0.15 
+	&__text
+		-ms-word-wrap: break-word
+		word-wrap: break-word
+		+fs(20)
+		+r(630)
+			+fs(12)
+	code
+		margin-bottom: 20px
+
+.is-hide
+	display: none
+.api__close
+	display: block
+	width: 40px
+	height: 40px
+	-moz-transform: rotate(45deg)
+	-ms-transform: rotate(45deg)
+	-webkit-transform: rotate(45deg)
+	-o-transform: rotate(45deg)
+	transform: rotate(45deg)
+	position: absolute
+	top: 10px
+	right: 10px
+	display: none
+	+r(1100)
+		display: block
+	+r(630)
+		width: 25px
+		height: 25px
+	&:hover
+		line
+			stroke: #07b6bf
+	svg
+		width: 100%
+		height: 100%
+		line
+			+tr(stroke 0.5s)

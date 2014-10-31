@@ -166,11 +166,11 @@ head.ready(function() {
 		$('.api__tab a').removeClass('is-active');
 		$(this).addClass('is-active');
 		attr = $(this).attr('href');
-		$('#sb,#body,#expl').hide();
+		$('#con,#body,#ex').hide();
 		$(' '+attr).show();
 		return false;
 	});
-	//api menu
+	//menu
 	$('.head a').click(function(event) {
 		/* Act on the event */
 		$('.head a').removeClass('chosen');
@@ -178,6 +178,16 @@ head.ready(function() {
 		attr = $(this).attr('href');
 		$('#si1,#si2').removeClass('close');
 		$(' '+attr).addClass('close');
+		return false;
+	});
+	//api menu
+	$('.switch__buttons').click(function(event) {
+		/* Act on the event */
+		$('.head a').removeClass('is-active');
+		$(this).addClass('is-active');
+		attr = $(this).attr('href');
+		$('#ex,#con').hide();
+		$(' '+attr).show();
 		return false;
 	});
 	//api docks
@@ -189,5 +199,24 @@ head.ready(function() {
 	$('.blocks__button').on('click', function() {
 		$(this).parents('.api').find('.api__inner').removeClass('is-show');
 		$(this).parents('.api').find('.api__right').removeClass('is-hide');
+	});
+	//api menu
+	$(function() {      
+	     //Enable swiping...
+	     $("body").swipe( {
+	       //Generic swipe handler for all directions
+	       swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
+	         $('.api__sidebar').addClass('is-swiped'); 
+	       },
+	       swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
+	         $('.api__sidebar').removeClass('is-swiped'); 
+	       },
+	       //Default is 75px, set to 0 for demo so any distance triggers swipe
+	        threshold:10
+	     });
+	   });
+	$('.api__close').on('click', function() {
+		$('.api__sidebar').removeClass('is-swiped');
+		return false;
 	});
 });

@@ -132,11 +132,20 @@
 	<div class="api">
 		<div class="api__in">
 			<ul class="api__tabs">
-				<li class="api__tab api__sb is-active-tab"><a href="#sb" class="is-active">Menu</a></li>
-				<li class="api__tab api__body"><a href="#body">Body</a></li>
-				<li class="api__tab api__expl"><a href="#expl">Example</a></li>
+				<li class="api__tab api__body is-active-tab"><a href="#body" class="is-active">Body</a></li>
+				<li class="api__tab api__expl"><a href="#ex">Example</a></li>
+				<li class="api__tab api__sb"><a href="#con">Consol</a></li>
 			</ul>
 			<div class="api__sidebar" id="sb">
+				<a href="#" class="api__close">
+					<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="47.15px" height="47.15px" viewBox="0 0 47.15 47.15" enable-background="new 0 0 47.15 47.15" xml:space="preserve">
+					<g>
+						<line fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" x1="0" y1="23.576" x2="47.146" y2="23.576"/>
+						<line fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" x1="23.572" y1="0.002" x2="23.572" y2="47.148"/>
+					</g>
+					</svg>
+				</a>
 				<div class="sidebar-in">
 					<h2><a href="#">INTRODUCTION</a></h2>
 					<ul class="nav">
@@ -158,7 +167,7 @@
 				</div>
 			</div>
 			<div class="api__content">
-				<div class="api__inner is-close" id="body">
+				<div class="api__inner" id="body">
 					<div class="api__center">
 						<h1>PLUGCHAIN API BETA</h1>
 						<hr>
@@ -193,7 +202,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="api__right is-close" id="expl">
+				<div class="api__right">
 					<div class="api__top">
 						<div class="api__select">
 							<i class="api-arrow"></i>
@@ -208,81 +217,156 @@
 							</div>
 						</div>
 						<div class="api__switch switch">
-							<a href="#" class="switch__buttons is-active">Example</a>
-							<a href="#" class="switch__buttons ">Console</a>
+							<a href="#ex" class="switch__buttons is-active">Example</a>
+							<a href="#con" class="switch__buttons">Console</a>
 						</div>
 					</div>
-					<ul class="api__way">
-						<li><a href="#">Blocks</a></li>
-						<li><a href="#">Block by hash</a></li>
-						<li><a href="#" class="is-active">Get block object by hash</a></li>
-					</ul>
-					<div class="api__right-in">
-						<span  class="api__prelink">Get</span><p class="api__link">https://proxy-plcapi.apiary.io/v1/bitcoin/unspents/<span>address</span></p>
-						<hr>
-						<h2>Parameters</h2>
-						<hr>
-						<div class="hash">
-							<div class="hash__left"><p>block_hash</p></div>
-							<div class="hash__right">
-								<p class="mark">Blockchain block to get information about<span class="p_mod">String</span></p>
-								<div class="hash__example">
-									<p>Example: <span>000000000000034a7dedef4a161fa058a2d67a173a90155f3a2fe6fc132e0ebf</span></p>
-								</div>
-							</div>
-						</div>
-						<h2>Request</h2>
-						<hr>
-						<ol class="request">
-							<li>1 <span class="request__link">https:<span>//plugchain.com/v1/bitcoin/block/000000000000034a7dedef4a161fa058a2d67a173a90155f3a2fe6fc132e0ebf</span></span></li>
-						</ol>
-						<h2>Response</h2>
-						<hr>
-						<span class="api__numbers">200</span>
-						<div class="content-type">
+					<div class="ex is-close" id="ex">
+						<ul class="api__way">
+							<li><a href="#">Blocks</a></li>
+							<li><a href="#">Block by hash</a></li>
+							<li><a href="#" class="is-active">Get block object by hash</a></li>
+						</ul>
+						<div class="api__right-in">
+							<span  class="api__prelink">Get</span><p class="api__link">https://proxy-plcapi.apiary.io/v1/bitcoin/unspents/<span>address</span></p>
 							<hr>
-							<code><span>Content-Type:</span> application/json</code>
+							<h2>Parameters</h2>
 							<hr>
-						</div>
-						<div class="api__screen">
-							<img src="img/api-screen.png" alt="">
-						</div>
-					</div>
-					<div class="api__fixed">
-						<div class="api__fixed-in">
-							<div class="select-left">
-								<p>Language</p>
-								<div class="api-select ms-first">
-									<div class="select js-select">
-									    <span class="select__text js-select-text">Node.js</span>
-									    <input type="hidden" class="js-select-input" value="0">
-									    <ul class="select__list js-select-list">
-									        <li data-id="0">Unspent</li>
-									    </ul>
+							<div class="hash">
+								<div class="hash__left"><p>block_hash</p></div>
+								<div class="hash__right">
+									<p class="mark">Blockchain block to get information about<span class="p_mod">String</span></p>
+									<div class="hash__example">
+										<p>Example: <span>000000000000034a7dedef4a161fa058a2d67a173a90155f3a2fe6fc132e0ebf</span></p>
 									</div>
 								</div>
 							</div>
-							<div class="select-left select-mob">
-								<p>Host</p>
-								<div class="api-select ms-first api-select_mod">
-									<div class="select js-select">
-									    <span class="select__text js-select-text">Debugung... proxy</span>
-									    <input type="hidden" class="js-select-input" value="0">
-									    <ul class="select__list js-select-list">
-									        <li data-id="0">Unspent</li>
-									    </ul>
+							<h2>Request</h2>
+							<hr>
+							<ol class="request">
+								<li>1 <span class="request__link">https:<span>//plugchain.com/v1/bitcoin/block/000000000000034a7dedef4a161fa058a2d67a173a90155f3a2fe6fc132e0ebf</span></span></li>
+							</ol>
+							<h2>Response</h2>
+							<hr>
+							<span class="api__numbers">200</span>
+							<div class="content-type">
+								<hr>
+								<code><span>Content-Type:</span> application/json</code>
+								<hr>
+							</div>
+							<div class="api__screen">
+								<img src="img/api-screen.png" alt="">
+							</div>
+						</div>
+						<div class="api__fixed">
+							<div class="api__fixed-in">
+								<div class="select-left">
+									<p>Language</p>
+									<div class="api-select ms-first">
+										<div class="select js-select">
+										    <span class="select__text js-select-text">Node.js</span>
+										    <input type="hidden" class="js-select-input" value="0">
+										    <ul class="select__list js-select-list">
+										        <li data-id="0">Unspent</li>
+										    </ul>
+										</div>
+									</div>
+								</div>
+								<div class="select-left select-mob">
+									<p>Host</p>
+									<div class="api-select ms-first api-select_mod">
+										<div class="select js-select">
+										    <span class="select__text js-select-text">Debugung... proxy</span>
+										    <input type="hidden" class="js-select-input" value="0">
+										    <ul class="select__list js-select-list">
+										        <li data-id="0">Unspent</li>
+										    </ul>
+										</div>
+									</div>
+								</div>
+								<div class="select-right">
+									<p>Type</p>
+									<div class="api-select ms-first">
+										<div class="select js-select">
+										    <span class="select__text js-select-text">Example</span>
+										    <input type="hidden" class="js-select-input" value="0">
+										    <ul class="select__list js-select-list">
+										        <li data-id="0">Console</li>
+										    </ul>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="select-right">
-								<p>Type</p>
-								<div class="api-select ms-first">
-									<div class="select js-select">
-									    <span class="select__text js-select-text">Example</span>
-									    <input type="hidden" class="js-select-input" value="0">
-									    <ul class="select__list js-select-list">
-									        <li data-id="0">Console</li>
-									    </ul>
+						</div>
+					</div>
+					<div class="con is-hide" id="con">
+						<div class="con__top">
+							<span  class="api__prelink">Get</span><p class="api__link">https://proxy-plcapi.apiary.io/v1/bitcoin/unspents/<span>address</span></p>
+						</div>
+						<div class="con__body">
+							<div class="con__buttons">
+								<ul>
+									<li class="is-first"><a href="#" class="con__button is-active"><span>URI parameters</span></a></li>
+									<li><a href="#" class="con__button"><span>Body</span></a></li>
+									<li><a href="#" class="con__button"><span>Headers</span></a></li>
+								</ul>
+							</div>
+							<div class="con__hash">
+								<span class="con__left">Transaction hash</span>
+								<span class="con__right">10b71f02a0c32cd70e1887348a870848ed7e56e2d2482701372e071520e89a12</span>
+							</div>
+							<div class="con__btns">
+								<a href="#" class="con__btn"><span>Reset Values</span></a>
+								<a href="#" class="con__btn"><span>Call Resource</span></a>
+							</div>
+							<div class="con__buttons">
+								<ul>
+									<li class="is-first"><a href="#" class="con__button is-active"><span>ROW</span></a></li>
+									<li><a href="#" class="con__button"><span>Diff</span></a></li>
+									<li><a href="#" class="con__button"><span>Code snipet</span></a></li>
+								</ul>
+							</div>
+							<h2>Reqest</h2>
+							<hr>
+							<code><span class="con__text">https://plugchain.com/v1/bitcoin/transaction/10b71f02a0c32cd70e1887348a870848ed7e56e2d2482701372e071520e89a12</span></code>
+							<hr class="hr_mod">
+						</div>
+						<div class="api__fixed">
+							<div class="api__fixed-in">
+								<div class="select-left">
+									<p>Language</p>
+									<div class="api-select ms-first">
+										<div class="select js-select">
+										    <span class="select__text js-select-text">Node.js</span>
+										    <input type="hidden" class="js-select-input" value="0">
+										    <ul class="select__list js-select-list">
+										        <li data-id="0">Unspent</li>
+										    </ul>
+										</div>
+									</div>
+								</div>
+								<div class="select-left select-mob">
+									<p>Host</p>
+									<div class="api-select ms-first api-select_mod">
+										<div class="select js-select">
+										    <span class="select__text js-select-text">Debugung... proxy</span>
+										    <input type="hidden" class="js-select-input" value="0">
+										    <ul class="select__list js-select-list">
+										        <li data-id="0">Unspent</li>
+										    </ul>
+										</div>
+									</div>
+								</div>
+								<div class="select-right">
+									<p>Type</p>
+									<div class="api-select ms-first">
+										<div class="select js-select">
+										    <span class="select__text js-select-text">Example</span>
+										    <input type="hidden" class="js-select-input" value="0">
+										    <ul class="select__list js-select-list">
+										        <li data-id="0">Console</li>
+										    </ul>
+										</div>
 									</div>
 								</div>
 							</div>

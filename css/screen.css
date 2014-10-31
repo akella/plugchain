@@ -506,12 +506,13 @@ body.is-body .out, body.is-body .footer, body.is-body .feedback, body.is-body .h
 @media only screen and (max-width: 630px) { .api__tabs li .is-active { border-bottom-width: 7px; } }
 .api__tabs .is-active-tab { width: 34%; }
 .api__in { height: 100%; width: 100%; }
-.api__sidebar { float: left; height: 100%; width: 295px; overflow-y: auto; overflow-x: hidden; background: #192129; position: relative; z-index: 100; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-@media only screen and (max-width: 1100px) { .api__sidebar { width: 100%; height: 100%; padding-bottom: 50px; } }
+.api__sidebar { float: left; height: 100%; width: 295px; overflow-y: auto; overflow-x: hidden; background: #192129; position: relative; z-index: 100; z-index: 99999; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+@media only screen and (max-width: 1100px) { .api__sidebar.is-swiped { left: 0; } }
+@media only screen and (max-width: 1100px) { .api__sidebar { width: 100%; height: 100%; padding-bottom: 50px; position: fixed; overflow: auto; top: 0; left: -100%; -moz-transition: left 0.3s linear; -o-transition: left 0.3s linear; -webkit-transition: left 0.3s linear; transition: left 0.3s linear; } }
 .api__sidebar h2 { margin: 10px 0 25px 0; }
 @media only screen and (max-width: 1100px) { .api__sidebar h2 { margin: 0 0 25px 0; } }
 @media only screen and (max-width: 630px) { .api__sidebar h2 { margin: 0 0 15px 0; } }
-.api__sidebar h2 a { font-size: 18px; font-size: 1.8rem; color: white; padding: 3px 15px 1px 37px; border-radius: 0 4px 4px 0; display: inline-block; font-family: "ProximaNova Regular", Arial, sans-serif; text-transform: uppercase; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s; }
+.api__sidebar h2 a { font-size: 18px; font-size: 1.8rem; color: white; padding: 3px 15px 1px 37px; border-radius: 0 4px 4px 0; display: inline-block; font-family: "ProximaNova Regular", Arial, sans-serif; text-transform: uppercase; -moz-transition: color 0.5s, background 0.5s; -o-transition: color 0.5s, background 0.5s; -webkit-transition: color 0.5s, background 0.5s; transition: color 0.5s, background 0.5s; }
 @media only screen and (max-width: 1100px) { .api__sidebar h2 a { font-size: 32px; font-size: 3.2rem; padding: 25px 15px 20px 75px; display: block; border-radius: 0; } }
 @media only screen and (max-width: 630px) { .api__sidebar h2 a { padding: 10px 10px 10px 35px; font-size: 18px; font-size: 1.8rem; } }
 .api__sidebar h2 a:hover { color: #1ebcc5; }
@@ -704,3 +705,56 @@ body.is-body .out, body.is-body .footer, body.is-body .feedback, body.is-body .h
 @media only screen and (max-width: 630px) { .nav .nav__drop-item:before { height: 28px; width: 7px; } }
 
 @media only screen and (max-width: 1100px) { .is-close { display: none; } }
+
+.con { background: #d0d7da; height: 100%; }
+.con__top { padding: 3% 4%; background: #a6aaab; }
+@media only screen and (max-width: 1100px) { .con__top { padding: 30px; } }
+@media only screen and (max-width: 630px) { .con__top { padding: 10px 20px; } }
+.con .api__prelink { color: #19222c; }
+.con .api__link { color: #505153; }
+.con .api__link span { color: #e62d68; }
+.con__body { padding: 3% 4%; background: #d0d7da; }
+@media only screen and (max-width: 1100px) { .con__body { padding: 30px 30px 150px 30px; } }
+@media only screen and (max-width: 630px) { .con__body { padding: 20px 20px 75px 20px; } }
+.con__buttons { padding: 3px; background: #a3afb5; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; *zoom: 1; margin-bottom: 20px; }
+.con__buttons:after { content: " "; display: table; clear: both; }
+.con__buttons ul li { width: 33%; float: left; }
+.con__buttons ul li.is-first { width: 34%; }
+.con__button { display: block; margin: 2px; text-align: center; height: 64px; text-align: center; font-size: 0; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; background: #c2c8ca; -moz-transition: background 0.5s; -o-transition: background 0.5s; -webkit-transition: background 0.5s; transition: background 0.5s; }
+.con__button:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+@media only screen and (max-width: 630px) { .con__button { height: 32px; } }
+.con__button.is-active { background: #3e5562; }
+.con__button.is-active span { color: white; }
+.con__button span { display: inline-block; vertical-align: middle; font-size: 18px; font-size: 1.8rem; color: #7c8b93; -moz-transition: color 0.5s; -o-transition: color 0.5s; -webkit-transition: color 0.5s; transition: color 0.5s; }
+@media only screen and (max-width: 630px) { .con__button span { font-size: 11px; font-size: 1.1rem; } }
+.con__button:hover { background: #1ebcc5; }
+.con__button:hover span { color: white; }
+.con__hash { padding: 20px 30px; *zoom: 1; background: #f1f2f2; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; margin-bottom: 20px; }
+.con__hash:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 630px) { .con__hash { padding: 5px 10px; } }
+.con__left { width: 33%; float: left; display: block; font-family: "ProximaNova Bold", Arial, sans-serif; font-size: 20px; font-size: 2rem; color: #ef4136; }
+@media only screen and (max-width: 630px) { .con__left { font-size: 12px; font-size: 1.2rem; width: 40%; } }
+.con__right { width: 62%; padding-left: 3%; float: left; display: block; -ms-word-wrap: break-word; word-wrap: break-word; font-family: "ProximaNova Light", Arial, sans-serif; font-size: 20px; font-size: 2rem; color: #838382; }
+@media only screen and (max-width: 630px) { .con__right { font-size: 12px; font-size: 1.2rem; width: 57%; } }
+.con__btns { text-align: justify; font-size: 0.1px; font-size: 0.01rem; word-spacing: 0px; max-width: 575px; margin: 0 auto 20px; }
+.con__btns:after { content: ""; width: 100%; display: inline-block; }
+.con__btn { width: 48%; max-width: 280px; display: inline-block; text-align: center; font-size: 0; background: #7c8b93; -moz-transition: background 0.5s; -o-transition: background 0.5s; -webkit-transition: background 0.5s; transition: background 0.5s; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+.con__btn:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.con__btn:hover { background: #1ebcc5; }
+.con__btn span { display: inline-block; vertical-align: middle; color: #e6e7e8; font-size: 26px; font-size: 2.6rem; font-family: "ProximaNova Bold", Arial, sans-serif; padding: 14px; }
+@media only screen and (max-width: 630px) { .con__btn span { font-size: 16px; font-size: 1.6rem; } }
+.con h2 { color: #3e5562; margin-top: 20px; margin-bottom: 30px; padding: 0; float: left; width: 100%; display: block; }
+.con hr { width: 100%; margin: 0 0 30px; border: none; background: #2c2c2e; height: 1px; border-top: #9da2a4 1px solid; border-bottom: #afb2b5 1px solid; opacity: 0.4; }
+.con hr.hr_mod { border-top-color: #4e5152; border-bottom-color: #b4b7ba; background: #75787a; opacity: 0.15; }
+.con__text { -ms-word-wrap: break-word; word-wrap: break-word; font-size: 20px; font-size: 2rem; }
+@media only screen and (max-width: 630px) { .con__text { font-size: 12px; font-size: 1.2rem; } }
+.con code { margin-bottom: 20px; }
+
+.is-hide { display: none; }
+
+.api__close { display: block; width: 40px; height: 40px; -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); position: absolute; top: 10px; right: 10px; display: none; }
+@media only screen and (max-width: 1100px) { .api__close { display: block; } }
+@media only screen and (max-width: 630px) { .api__close { width: 25px; height: 25px; } }
+.api__close:hover line { stroke: #07b6bf; }
+.api__close svg { width: 100%; height: 100%; }
+.api__close svg line { -moz-transition: stroke 0.5s; -o-transition: stroke 0.5s; -webkit-transition: stroke 0.5s; transition: stroke 0.5s; }
