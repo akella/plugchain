@@ -75,7 +75,7 @@
 		z-index: 99
 		+r(800)
 			margin: 0
-	.navigation__plus
+	.navigation__plus, .api-side
 		width: 39px
 		height: 39px
 		display: block
@@ -103,6 +103,33 @@
 			height: 24px
 			margin: 0
 			+transition(transform 0.3s ease)
+	.api-side
+		display: none
+		div
+			width: 100%
+			height: 100%
+		+r(1100)
+			display: block
+		.side-show
+			display: block
+		.side-hide
+			display: none
+			svg
+				width: 100%
+				height: auto
+				max-height: 100%
+				polyline
+					+transition(stroke 0.5s)
+					stroke: #fff
+		&:hover
+			svg
+				polyline
+					stroke: #07b6bf
+		&.is-swiped
+			.side-show
+				display: none
+			.side-hide
+				display: block
 	.navigation__menu
 		width: 38px
 		height: 37px
@@ -150,6 +177,8 @@
 		+transition(right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275))
 		position: relative
 		z-index: 9999
+		+r(1100)
+			display: none
 		svg
 			display: none
 		+r(800)
@@ -160,8 +189,7 @@
 			+transition(transform 0.5s ease)
 			+cover
 			margin: 0 17px 0 0 
-		+r(630)
-			display: block
+		+r(630)	
 			width: 24px
 			height: 24px
 			margin: 0
@@ -190,29 +218,6 @@
 		transform: translateY(0px) rotate(-45deg)
 		&:hover
 			background-image: url(../img/svg/plus-hov.svg)
-		// span
-		// 	position: absolute
-		// 	top: 50%
-		// 	left: 0
-		// 	right: 0
-		// 	&.is-sl
-		// 		background: none 
-		// 		&:after
-		// 			transform: translateY(0px) rotate(-45deg)
-		// 		&:before
-		// 			transform: translateY(0px) rotate(45deg)
-		// 	&.is-fl
-		// 		-moz-transform: rotate(45deg)
-		// 		-ms-transform: rotate(45deg)
-		// 		-webkit-transform: rotate(45deg)
-		// 		-o-transform: rotate(45deg)
-		// 		transform: rotate(45deg)
-		// 	&.is-tl
-		// 		-moz-transform: rotate(-45deg)
-		// 		-ms-transform: rotate(-45deg)
-		// 		-webkit-transform: rotate(-45deg)
-		// 		-o-transform: rotate(-45deg)
-		// 		transform: rotate(-45deg)
 		+r(800)
 			right: 0
 .land

@@ -119,12 +119,22 @@ a { text-decoration: none; }
 @media only screen and (max-width: 630px) { .navigation { top: 18px; padding: 0 13px; } }
 .navigation a { margin: 0 15px; float: right; position: relative; z-index: 99; }
 @media only screen and (max-width: 800px) { .navigation a { margin: 0; } }
-.navigation .navigation__plus { width: 39px; height: 39px; display: block; right: 0; -moz-transition: right 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275), -moz-transform 0.5s linear; -o-transition: right 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275), -o-transform 0.5s linear; -webkit-transition: right 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.5s linear; transition: right 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.5s linear; position: relative; z-index: 9999; }
-.navigation .navigation__plus svg { width: 100%; height: 100%; }
-.navigation .navigation__plus line { -moz-transition: stroke 0.5s; -o-transition: stroke 0.5s; -webkit-transition: stroke 0.5s; transition: stroke 0.5s; }
-.navigation .navigation__plus:hover line { stroke: #07b6bf; }
-@media only screen and (max-width: 800px) { .navigation .navigation__plus { float: left; width: 48px; height: 48px; margin: 0 0 0 17px; -moz-transition: -moz-transform 0.5s ease; -o-transition: -o-transform 0.5s ease; -webkit-transition: -webkit-transform 0.5s ease; transition: transform 0.5s ease; } }
-@media only screen and (max-width: 630px) { .navigation .navigation__plus { display: block; width: 24px; height: 24px; margin: 0; -moz-transition: -moz-transform 0.3s ease; -o-transition: -o-transform 0.3s ease; -webkit-transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; } }
+.navigation .navigation__plus, .navigation .api-side { width: 39px; height: 39px; display: block; right: 0; -moz-transition: right 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275), -moz-transform 0.5s linear; -o-transition: right 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275), -o-transform 0.5s linear; -webkit-transition: right 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.5s linear; transition: right 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.5s linear; position: relative; z-index: 9999; }
+.navigation .navigation__plus svg, .navigation .api-side svg { width: 100%; height: 100%; }
+.navigation .navigation__plus line, .navigation .api-side line { -moz-transition: stroke 0.5s; -o-transition: stroke 0.5s; -webkit-transition: stroke 0.5s; transition: stroke 0.5s; }
+.navigation .navigation__plus:hover line, .navigation .api-side:hover line { stroke: #07b6bf; }
+@media only screen and (max-width: 800px) { .navigation .navigation__plus, .navigation .api-side { float: left; width: 48px; height: 48px; margin: 0 0 0 17px; -moz-transition: -moz-transform 0.5s ease; -o-transition: -o-transform 0.5s ease; -webkit-transition: -webkit-transform 0.5s ease; transition: transform 0.5s ease; } }
+@media only screen and (max-width: 630px) { .navigation .navigation__plus, .navigation .api-side { display: block; width: 24px; height: 24px; margin: 0; -moz-transition: -moz-transform 0.3s ease; -o-transition: -o-transform 0.3s ease; -webkit-transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; } }
+.navigation .api-side { display: none; }
+.navigation .api-side div { width: 100%; height: 100%; }
+@media only screen and (max-width: 1100px) { .navigation .api-side { display: block; } }
+.navigation .api-side .side-show { display: block; }
+.navigation .api-side .side-hide { display: none; }
+.navigation .api-side .side-hide svg { width: 100%; height: auto; max-height: 100%; }
+.navigation .api-side .side-hide svg polyline { -moz-transition: stroke 0.5s; -o-transition: stroke 0.5s; -webkit-transition: stroke 0.5s; transition: stroke 0.5s; stroke: white; }
+.navigation .api-side:hover svg polyline { stroke: #07b6bf; }
+.navigation .api-side.is-swiped .side-show { display: none; }
+.navigation .api-side.is-swiped .side-hide { display: block; }
 .navigation .navigation__menu { width: 38px; height: 37px; display: block; right: 0; -moz-transition: right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275); -o-transition: right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275); -webkit-transition: right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275); transition: right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275); overflow: hidden; position: relative; z-index: 9999; }
 .navigation .navigation__menu svg { width: 100%; height: 100%; }
 .navigation .navigation__menu line { -moz-transition: stroke 0.5s; -o-transition: stroke 0.5s; -webkit-transition: stroke 0.5s; transition: stroke 0.5s; }
@@ -138,9 +148,10 @@ a { text-decoration: none; }
 @media only screen and (max-width: 800px) { .navigation .navigation__menu { width: 48px; height: 46px; margin: 0 17px 0 0; -moz-transition: -moz-transform 0.5s ease; -o-transition: -o-transform 0.5s ease; -webkit-transition: -webkit-transform 0.5s ease; transition: transform 0.5s ease; } }
 @media only screen and (max-width: 630px) { .navigation .navigation__menu { display: block; width: 24px; height: 24px; margin: 0; -moz-transition: -moz-transform 0.3s ease; -o-transition: -o-transform 0.3s ease; -webkit-transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; } }
 .navigation .navigation__prof { background: url('../img/icons-s131fd12ce9.png') 0 -721px no-repeat; width: 39px; height: 40px; right: 0; -moz-transition: right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275); -o-transition: right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275); -webkit-transition: right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275); transition: right 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; z-index: 9999; }
+@media only screen and (max-width: 1100px) { .navigation .navigation__prof { display: none; } }
 .navigation .navigation__prof svg { display: none; }
 @media only screen and (max-width: 800px) { .navigation .navigation__prof { float: left; width: 48px; height: 46px; background: url(../img/icons/prof.png) no-repeat center center; -moz-transition: -moz-transform 0.5s ease; -o-transition: -o-transform 0.5s ease; -webkit-transition: -webkit-transform 0.5s ease; transition: transform 0.5s ease; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; margin: 0 17px 0 0; } }
-@media only screen and (max-width: 630px) { .navigation .navigation__prof { display: block; width: 24px; height: 24px; margin: 0; background: url(../img/icons/prof.png) no-repeat center center; -moz-transition: -moz-transform 0.3s ease; -o-transition: -o-transform 0.3s ease; -webkit-transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } }
+@media only screen and (max-width: 630px) { .navigation .navigation__prof { width: 24px; height: 24px; margin: 0; background: url(../img/icons/prof.png) no-repeat center center; -moz-transition: -moz-transform 0.3s ease; -o-transition: -o-transform 0.3s ease; -webkit-transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } }
 .navigation .navigation__prof.is-m { right: 310px; }
 @media only screen and (max-width: 800px) { .navigation .navigation__prof.is-m { right: 0; } }
 .navigation .is-x { right: 310px; -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
@@ -506,9 +517,11 @@ body.is-body .out, body.is-body .footer, body.is-body .feedback, body.is-body .h
 @media only screen and (max-width: 630px) { .api__tabs li .is-active { border-bottom-width: 7px; } }
 .api__tabs .is-active-tab { width: 34%; }
 .api__in { height: 100%; width: 100%; }
-.api__sidebar { float: left; height: 100%; width: 295px; overflow-y: auto; overflow-x: hidden; background: #192129; position: relative; z-index: 100; z-index: 99999; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.api__sidebar { float: left; height: 100%; width: 295px; overflow-y: auto; overflow-x: hidden; background: #192129; position: relative; z-index: 100; z-index: 999; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+@media only screen and (min-width: 1100px) { .api__sidebar { left: 0 !important; } }
 @media only screen and (max-width: 1100px) { .api__sidebar.is-swiped { left: 0; } }
-@media only screen and (max-width: 1100px) { .api__sidebar { width: 100%; height: 100%; padding-bottom: 50px; position: fixed; overflow: auto; top: 0; left: -100%; -moz-transition: left 0.3s linear; -o-transition: left 0.3s linear; -webkit-transition: left 0.3s linear; transition: left 0.3s linear; } }
+@media only screen and (max-width: 1100px) { .api__sidebar { width: 80%; height: 100%; position: fixed; top: 0; left: -100%; -moz-transition: left 0.4s linear; -o-transition: left 0.4s linear; -webkit-transition: left 0.4s linear; transition: left 0.4s linear; padding-top: 125px; background: none; overflow: hidden; } }
+@media only screen and (max-width: 630px) { .api__sidebar { padding-top: 62px; } }
 .api__sidebar h2 { margin: 10px 0 25px 0; }
 @media only screen and (max-width: 1100px) { .api__sidebar h2 { margin: 0 0 25px 0; } }
 @media only screen and (max-width: 630px) { .api__sidebar h2 { margin: 0 0 15px 0; } }
@@ -682,7 +695,7 @@ body.is-body .out, body.is-body .footer, body.is-body .feedback, body.is-body .h
 @media only screen and (max-width: 630px) { .blocks button:active:before { width: 19px; height: 17px; background: url(../img/icons/btn-arr-hov.png) no-repeat center center; background-image: url(../img/svg/btn-arr-hov.svg); background-size: cover; margin-top: -8px; right: 10px; } }
 
 .sidebar-in { padding: 30px 0 0 0; }
-@media only screen and (max-width: 1100px) { .sidebar-in { padding: 10px 0 0 0; } }
+@media only screen and (max-width: 1100px) { .sidebar-in { padding: 10px 0 50px 0; background: #192129; overflow: auto; height: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; } }
 
 .nav { padding: 0 0 0 37px; }
 @media only screen and (max-width: 1100px) { .nav { padding: 0 0 0 75px; } }
@@ -751,10 +764,3 @@ body.is-body .out, body.is-body .footer, body.is-body .feedback, body.is-body .h
 .con code { margin-bottom: 20px; }
 
 .is-hide { display: none; }
-
-.api__close { display: block; width: 40px; height: 40px; -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); position: absolute; top: 10px; right: 10px; display: none; }
-@media only screen and (max-width: 1100px) { .api__close { display: block; } }
-@media only screen and (max-width: 630px) { .api__close { width: 25px; height: 25px; } }
-.api__close:hover line { stroke: #07b6bf; }
-.api__close svg { width: 100%; height: 100%; }
-.api__close svg line { -moz-transition: stroke 0.5s; -o-transition: stroke 0.5s; -webkit-transition: stroke 0.5s; transition: stroke 0.5s; }

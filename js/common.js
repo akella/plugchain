@@ -201,22 +201,51 @@ head.ready(function() {
 		$(this).parents('.api').find('.api__right').removeClass('is-hide');
 	});
 	//api menu
+	// $(function() {      
+	//      //Enable swiping...
+	//      $("body").swipe( {
+	//        //Generic swipe handler for all directions
+	//        swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
+	//          $('.api__sidebar').addClass('is-swiped'); 
+	//          $('.api-side').addClass('is-swiped'); 
+	//        },
+	//        swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
+	//          $('.api__sidebar').removeClass('is-swiped'); 
+	//          $('.api-side').removeClass('is-swiped'); 
+	//        },
+	//        //Default is 75px, set to 0 for demo so any distance triggers swipe
+	//         threshold:10
+	//      });
+	//    });
+	$('.api-side').on('click', function() {
+		// $('.api__sidebar').toggleClass('is-swiped');
+		if ($('.api__sidebar').css('left')=='0px') {
+			$('.api__sidebar').css('left', '-100%');
+		}
+		else {
+			$('.api__sidebar').css('left', '0px');
+		};
+		$('.api-side').toggleClass('is-swiped');
+		return false;
+	});
 	$(function() {      
 	     //Enable swiping...
 	     $("body").swipe( {
-	       //Generic swipe handler for all directions
-	       swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
-	         $('.api__sidebar').addClass('is-swiped'); 
+	       swipeRight:function(event, phase, direction, distance)
+	       {
+	           str="Handler fired, you swiped " + direction;
+	        	$('.api__sidebar').css("left", "0");
+	        	$('.api-side').addClass('is-swiped'); 
 	       },
-	       swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
-	         $('.api__sidebar').removeClass('is-swiped'); 
+	       swipeLeft:function(event, phase, direction, distance)
+	       {
+	           str="Handler fired, you swiped " + direction;
+	        	$('.api__sidebar').css("left", "-100%");
+	        	$('.api__sidebar').removeClass('is-swiped');
+	        	$('.api-side').removeClass('is-swiped'); 
 	       },
-	       //Default is 75px, set to 0 for demo so any distance triggers swipe
-	        threshold:10
+	       triggerOnTouchEnd:false,
+	       threshold:50
 	     });
 	   });
-	$('.api__close').on('click', function() {
-		$('.api__sidebar').removeClass('is-swiped');
-		return false;
-	});
 });
